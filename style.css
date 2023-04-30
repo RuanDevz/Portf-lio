@@ -40,6 +40,53 @@ header .fa-bars{
     color: #8257e6;
 }
 
+.typing {
+  overflow: hidden; /* Oculta o texto original */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  margin: 0; /* Remove as margens padrão */
+  font-size: 2em; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define a espessura da fonte */
+  animation: typing 2s steps(40, end), blink 2s  infinite; /* Aplica a animação de digitação e o cursor */
+}
+
+.myname {
+  overflow: hidden; /* Oculta o texto original */
+  margin: 0; /* Remove as margens padrão */
+  font-size: 2em; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define a espessura da fonte */
+  letter-spacing: .1em; /* Define o espaçamento entre as letras */
+  animation: complement 3s steps(40, end), blink .75s step-end infinite; /* Aplica a animação de complemento e o cursor */
+}
+
+@keyframes complement {
+  from { width: 0 } /* Inicia com largura 0 */
+  to { width: 100% } /* Termina com largura 100% */
+}
+
+/* Estilo do cursor */
+@keyframes blink {
+  from, to { border-color: transparent } /* Define a cor transparente */
+  50% { border-color: #333 } /* Define a cor do cursor */
+}
+
+@keyframes typing {
+  from { width: 0 } /* Inicia com largura 0 */
+  to { width: 100% } /* Termina com largura 100% */
+}
+
+@keyframes blink {
+  from, to { border-color: transparent } /* Define a cor transparente */
+  50% { border-color: #333 } /* Define a cor do cursor */
+}
+
+/* Estilo do texto "Desenvolvedor Front-End" */
+p {
+  font-size: 1.5em; /* Define o tamanho da fonte */
+  font-weight: 300; /* Define a espessura da fonte */
+  margin-top: 0; /* Remove a margem superior */
+}
+
+
 .toggle-switch {
     position: relative;
     width: 50px;
