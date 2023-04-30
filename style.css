@@ -38,45 +38,71 @@ header h1{
 
 header .fa-bars{
     color: #8257e6;
+    cursor: pointer;
 }
 
 .typing {
-  overflow: hidden; /* Oculta o texto original */
-  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-  margin: 0; /* Remove as margens padrão */
-  font-size: 2em; /* Define o tamanho da fonte */
-  font-weight: 500; /* Define a espessura da fonte */
-  animation: typing 2s steps(40, end), blink 2s  infinite; /* Aplica a animação de digitação e o cursor */
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+  animation: typing 4s; /* Defina a contagem de iteração como 1 */
 }
+
 
 .myname {
   overflow: hidden; /* Oculta o texto original */
   margin: 0; /* Remove as margens padrão */
   font-size: 2em; /* Define o tamanho da fonte */
   font-weight: 500; /* Define a espessura da fonte */
-  letter-spacing: .1em; /* Define o espaçamento entre as letras */
-  animation: complement 3s steps(40, end), blink .75s step-end infinite; /* Aplica a animação de complemento e o cursor */
+  white-space: nowrap;
+  opacity: 0; /* Torna o nome invisível */
+  animation: complement 2s steps(100, end), blink .75s step-end infinite; /* Aplica a animação de complemento e o cursor */
+  animation-delay: 1.80s; /* Adiciona um atraso de 2 segundos */
 }
+
+.myname.show {
+  opacity: 1; /* Mostra o nome após o atraso */
+}
+
+.dev.mostrar{
+  opacity: 1;
+}
+
+.dev {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  opacity: 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  animation: typing 4s 1 steps(40);
+  animation-delay: 3.6s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
 
 @keyframes complement {
   from { width: 0 } /* Inicia com largura 0 */
   to { width: 100% } /* Termina com largura 100% */
 }
 
-/* Estilo do cursor */
-@keyframes blink {
-  from, to { border-color: transparent } /* Define a cor transparente */
-  50% { border-color: #333 } /* Define a cor do cursor */
-}
 
 @keyframes typing {
   from { width: 0 } /* Inicia com largura 0 */
   to { width: 100% } /* Termina com largura 100% */
-}
-
-@keyframes blink {
-  from, to { border-color: transparent } /* Define a cor transparente */
-  50% { border-color: #333 } /* Define a cor do cursor */
 }
 
 /* Estilo do texto "Desenvolvedor Front-End" */
@@ -152,12 +178,10 @@ p {
   ::-webkit-scrollbar {
     display: none;
   }
-  
-  
-
-  .first{
-
-  }
+ .paragrafo{
+  display: flex;
+  justify-content: center;
+ }
   .first img{
     display: block;
     margin: 0 auto;
