@@ -133,12 +133,18 @@ header .fa-bars{
   .first p{
     text-align: center;
     color: #828282;
-    padding: 8px 0px;
+    padding: 20px 0px;
+  }
+
+  .botoes{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
   }
   .botao{
     display: flex;
     justify-content: center;
-    padding: 30px 0px;
+    padding: 10px 0px;
   }
   button {
     position: relative;
@@ -249,6 +255,6 @@ header .fa-bars{
     color: #828282;
     text-align: justify;
     line-height: 2em;
-    max-width: 360px;
+    max-width: 365px;
     margin: 0 auto;
   }
