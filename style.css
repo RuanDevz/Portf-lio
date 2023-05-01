@@ -337,6 +337,13 @@ p {
   padding: 20px 0px;
 }
 
+h1#title{
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
 .allskills{
   display: flex;
   justify-content: space-around;
@@ -375,8 +382,8 @@ p {
   display: flex;
   justify-content: center;
   opacity: 0;
-  transform: translateX(-90%);
-  transition: opacity 0.5s ease-out, transform 2s ease-out;
+  transform: translateX(-70%);
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .allskills.visible {
