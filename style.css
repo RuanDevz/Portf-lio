@@ -392,4 +392,57 @@ h1#title{
 }
 
 
+.projetos h2{
+  color: white;
+  margin-left: 20px;
+  padding-top: 60px;
+  max-width: 90px;
+  border-bottom: 4px solid #8257e6;
+}
+
+.destaques{
+  position: relative;
+}
+
+.destaques img{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 330px;
+  filter: brightness(0.4);
+}
+
+.borda{
+  display: block;
+  margin: 0 auto;
+  filter: brightness(1);
+  width: 330px;
+  height: 5px;
+  background-color: #9161ff;
+}
+
+.destaque-img h1{
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 0%;
+  transform: translateY(400%);
+  z-index: 1;
+}
+
+.tecnologias{
+  display: flex;
+  justify-content: space-around;
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.tecnologias img{
+  width: 20px;
+  filter: brightness(1.1);
+  position: relative;
+  transform: translateY(670%);
+  z-index: 1;
+}
 
