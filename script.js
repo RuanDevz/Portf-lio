@@ -24,3 +24,14 @@ function checkScroll() {
 
 // Adicione o evento de rolagem
 window.addEventListener('scroll', checkScroll);
+
+const imagemPrincipal = document.querySelectorAll("img#principal");
+
+imagemPrincipal.addEventListener("mouseover", function() {
+  const h1 = document.querySelector("h1");
+  const tecnologias = document.querySelector(".tecnologias");
+
+  h1.style.display = "none";
+  tecnologias.style.display = "none";
+});
+

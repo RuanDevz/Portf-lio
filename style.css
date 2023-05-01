@@ -410,6 +410,7 @@ h1#title{
   margin: 0 auto;
   max-width: 330px;
   filter: brightness(0.4);
+  cursor: pointer;
 }
 
 .borda{
@@ -445,4 +446,5 @@ h1#title{
   transform: translateY(670%);
   z-index: 1;
 }
+
 
