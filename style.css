@@ -330,6 +330,7 @@ p {
     padding: 0 15px;
   }
 
+
 .third h1{
   color: white;
   font-size: 2em;
@@ -341,7 +342,7 @@ h1#title{
   color: white;
   font-size: 2em;
   text-align: center;
-  padding: 20px 0px;
+  padding: 50px 0px;
 }
 
 .allskills{
@@ -369,6 +370,12 @@ h1#title{
   background: #212121;
   border-bottom: 4px solid #8257e6;
   border-radius: 30px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.third div#skills:hover{
+  width: 145px;
+  height: 155px;
+  transition: 1s;
 }
 
 /* Define a animação */
@@ -404,6 +411,7 @@ h1#title{
   position: relative;
 }
 
+
 .destaques img{
   display: block;
   width: 100%;
@@ -411,6 +419,17 @@ h1#title{
   max-width: 330px;
   filter: brightness(0.4);
   cursor: pointer;
+}
+
+.destaques img:hover{
+  filter: brightness(1);
+}
+.destaque-img h1:hover{
+  filter: brightness(1);
+}
+
+.tecnologias img:hover{
+  filter: brightness(1);
 }
 
 .borda{
@@ -428,6 +447,7 @@ h1#title{
   position: relative;
   top: 50%;
   left: 0%;
+  cursor: pointer;
   transform: translateY(400%);
   z-index: 1;
 }
@@ -447,4 +467,41 @@ h1#title{
   z-index: 1;
 }
 
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contatos{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contatos h1{
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  padding: 20px 0px;
+}
 
+.contatos p{
+  text-align: center;
+  color: #828282;
+  font-size: 1em;
+  padding: 20px 0px;
+
+}
+
+#icon{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #212121;
+  font-size: 5em;
+  color: #8257e6;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+}
