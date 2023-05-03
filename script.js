@@ -22,29 +22,3 @@ function checkScroll() {
   }
 }
 window.addEventListener('scroll', checkScroll);
-// Adicione o evento de rolagem
-const h1 = document.querySelectorAll('.destaques h1');
-const skills = document.querySelectorAll('.destaques .tecnologias');
-const imagens = document.querySelectorAll('.destaque-img img');
-
-imagens.forEach((imagem) => {
-  imagem.addEventListener('mouseover', function() {
-    h1.forEach((titulo) => {
-      titulo.style.display = 'none';
-    });
-    skills.forEach((habilidade) => {
-      habilidade.style.display = 'none';
-    });
-    this.style.filter = 'brightness(1)';
-  });
-  
-  imagem.addEventListener('mouseout', function() {
-    h1.forEach((titulo) => {
-      titulo.style.display = 'block';
-    });
-    skills.forEach((habilidade) => {
-      habilidade.style.display = 'flex';
-    });
-    this.style.filter = 'brightness(0.5)';
-  });
-});
