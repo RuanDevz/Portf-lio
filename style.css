@@ -14,6 +14,14 @@
 
 }
 
+.light-theme{
+  background-color: #d8dbe0;
+}
+
+.dark-theme{
+  background-color: #13131f;
+}
+
 body{
     transition: 0.2s linear;
     background-color: #13131f;
@@ -371,11 +379,10 @@ h1#title{
   border-bottom: 4px solid #8257e6;
   border-radius: 30px 0px 0px 0px;
   box-sizing: border-box;
+  transition: transform 0.2s ease-out;
 }
 .third div#skills:hover{
-  width: 145px;
-  height: 155px;
-  transition: 1s;
+  transform: scale(1.1) translateZ(30px);
 }
 
 /* Define a animação */
@@ -439,6 +446,14 @@ h1#title{
   width: 330px;
   height: 5px;
   background-color: #9161ff;
+}
+
+img#principal{
+  transition: transform 0.5s ease-out;
+}
+
+img#principal:hover {
+  transform: scale(1.1) translateZ(20px); /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
 }
 
 .destaque-img h1{
@@ -506,4 +521,12 @@ h1#title{
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
+}
+
+div#contact{
+  transition: transform 0.2s ease-out;
+}
+
+div#contact:hover{
+  transform: scale(1.1) translateZ(30px);
 }

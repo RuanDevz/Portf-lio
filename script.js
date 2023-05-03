@@ -1,3 +1,39 @@
+const check = document.getElementById('check');
+const light = document.getElementById('light');
+const portfolio = document.getElementById('portfolio');
+const nome = document.getElementById('nome');
+const h1s = document.querySelectorAll('h1#title');
+const h2s = document.getElementById('destaq');
+
+check.addEventListener('click', toggleTema);
+
+function toggleTema() {
+  if (light.classList.contains('light-theme')) {
+    light.classList.remove('light-theme');
+    light.classList.add('dark-theme');
+    portfolio.style.color = '#d8dbe0';
+    nome.style.color = '#d8dbe0';
+    for (let i = 0; i < h1s.length; i++) {
+      h1s[i].style.color = '#d8dbe0';
+    }
+    h2s.style.color ='#d8dbe0'
+  } else {
+    light.classList.remove('dark-theme');
+    light.classList.add('light-theme');
+    portfolio.style.color = '#13131f';
+    nome.style.color = '#13131f';
+    for (let i = 0; i < h1s.length; i++) {
+      h1s[i].style.color = '#13131f';
+    }
+    h2s.style.color ='#13131f'
+  }
+}
+
+
+
+
+
+
 setTimeout(function() {
     document.querySelector('.myname').classList.add('show');
   }, 1800);
@@ -22,3 +58,40 @@ function checkScroll() {
   }
 }
 window.addEventListener('scroll', checkScroll);
+
+
+const imgs = document.querySelectorAll('#principal');
+const h1 = document.querySelectorAll('.destaques h1');
+const habilidades = document.querySelectorAll('.tecnologias img');
+
+const borda = document.querySelectorAll('.borda');
+
+for (let i = 0; i < imgs.length; i++) {
+  imgs[i].addEventListener('mouseover', () => {
+    h1.forEach((text) => {
+      text.style.opacity = '0';
+    });
+    habilidades.forEach((icons) => {
+      icons.style.opacity = '0'
+    })
+
+    borda.forEach((bord) => {
+      bord.style.display = 'none'
+    })
+  });
+
+  imgs[i].addEventListener('mouseout', () => {
+    h1.forEach((text) => {
+      text.style.opacity = '1';
+    });
+    habilidades.forEach((icons) => {
+      icons.style.opacity = '1'
+    })
+
+    borda.forEach((bord) => {
+      bord.style.display = 'block'
+    })
+  });
+}
+
+

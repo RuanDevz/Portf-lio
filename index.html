@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfólio</title>
 </head>
-<body>
+<body id="light">
     <header>
         <i class="fa-solid fa-bars"></i>
-        <h1>Portfólio</h1>
+        <h1 id="portfolio">Portfólio</h1>
         <div class="toggle-switch">
             <label class="switch-label">
-              <input type="checkbox" class="checkbox">
+              <input id="check" type="checkbox" class="checkbox">
               <span class="slider"></span>
             </label>
           </div>  
@@ -25,7 +25,7 @@
     <main>
         <section class="first">
             <img src="imagens/Design_sem_nome-removebg-preview.png" alt="Minhafoto">
-            <h1 class="typing" >Olá, eu sou o <br></h1>
+            <h1 id="nome" class="typing" >Olá, eu sou o <br></h1>
             <h1 class="myname"> <span>Ruan Batista :)</span></h1>
             <div class="paragrafo">
                 <p class="dev" >Desenvolvedor Front-End</p>
@@ -55,7 +55,7 @@
             <p>Sou um estudante de desenvolvimento Front-End apaixonado por criar experiências digitais incríveis para os usuários, utilizando as linguagens HTML, CSS e Javascript. Atualmente, estou aprimorando minhas habilidades por meio do curso de graduação em Análise e Desenvolvimento de Sistemas, além de estar me dedicando ao aprendizado da língua inglesa para expandir ainda mais meus horizontes.</p>
         </section>
         <section class="third">
-            <h1 id="title" >Habilidades</h1>
+            <h1 id="title">Habilidades</h1>
             <div class="allskills">
                 <div id="skills" class="html">
                     <h1>HTML5</h1>
@@ -77,7 +77,7 @@
         </section>
             <section class="projetos">
               <h1 id="title">Projetos</h1>
-              <h2>Destaques</h2>
+              <h2 id="destaq">Destaques</h2>
               <div class="destaques">
                 <div class="destaque-img">
                     <h1>FindAFrind</h1>
@@ -117,24 +117,24 @@
             <section>
                 <h1 id="title">Contatos</h1>
                 <div class="contatos">
-                    <div class="email">
+                    <div id="contact" class="email">
                         <div class="centralizar"><i id="icon" class="fa-regular fa-envelope"></i></div>
-                        <h1>E-mail</h1>
+                        <h1 id="title">E-mail</h1>
                         <p>Ruanbatista1509@outlook.com</p>
                     </div>
-                    <div class="telefone">
+                    <div id="contact" class="telefone">
                         <i id="icon" class="fa-solid fa-phone"></i>
-                        <h1>Telefone</h1>
+                        <h1 id="title">Telefone</h1>
                         <p>(83) 98840-7953</p>
                     </div>
-                    <div class="linkedin">
+                    <div id="contact" class="linkedin">
                         <i id="icon" class="fa-brands fa-linkedin"></i>
-                        <h1>Linkedin</h1>
+                        <h1 id="title">Linkedin</h1>
                         <p>@RuanBatista</p>
                     </div>
-                    <div class="github">
+                    <div id="contact" class="github">
                         <i id="icon" class="fa-brands fa-github"></i>
-                        <h1>Github</h1>
+                        <h1 id="title">Github</h1>
                         <p>@RuanDevz</p>
                     </div>
                 </div>
