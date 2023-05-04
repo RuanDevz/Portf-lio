@@ -70,37 +70,37 @@ const icone3 = document.getElementById('iconimg3')
 const borda = document.querySelectorAll('.destaque-img .borda');
 
 img1.addEventListener('mouseover', () => {
-  h1[0].style.opacity = '0';
+  h1[0].style.display = 'none';
   icone1.style.display = 'none'
   borda[0].style.display = 'none';
 });
 
 img1.addEventListener('mouseout', () => {
-  h1[0].style.opacity = '1';
+  h1[0].style.display = 'block';
   icone1.style.display = 'flex'
   borda[0].style.display = 'block';
 });
 
 img2.addEventListener('mouseover', () => {
-  h1[1].style.opacity = '0';
+  h1[1].style.display = 'none';
   icone2.style.display = 'none'
   borda[1].style.display = 'none';
 });
 
 img2.addEventListener('mouseout', () => {
-  h1[1].style.opacity = '1';
+  h1[1].style.display = 'block';
   icone2.style.display = 'flex'
   borda[1].style.display = 'block';
 });
 
 img3.addEventListener('mouseover', () => {
-  h1[2].style.opacity = '0';
+  h1[2].style.display = 'none';
   icone3.style.display = 'none'
   borda[2].style.display = 'none';
 });
 
 img3.addEventListener('mouseout', () => {
-  h1[2].style.opacity = '1';
+  h1[2].style.display = 'block';
   icone3.style.display = 'flex'
   borda[2].style.display = 'block';
 });
