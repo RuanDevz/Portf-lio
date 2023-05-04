@@ -47,7 +47,7 @@ const allSkills = document.querySelector('.allskills');
 
 // Função que adiciona a classe .visible quando o elemento estiver visível na tela
 function checkScroll() {
-  let elementTop = allSkills.getBoundingClientRect().top;
+  let elementTop = allSkills.getBoundingClientRect().top + 100;
   let elementBottom = allSkills.getBoundingClientRect().bottom;
 
   // Verifique se o elemento está na tela
@@ -104,5 +104,4 @@ img3.addEventListener('mouseout', () => {
   icone3.style.display = 'flex'
   borda[2].style.display = 'block';
 });
-
 
