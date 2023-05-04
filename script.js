@@ -60,38 +60,49 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 
 
-const imgs = document.querySelectorAll('#principal');
-const h1 = document.querySelectorAll('.destaques h1');
-const habilidades = document.querySelectorAll('.tecnologias img');
+const h1 = document.querySelectorAll('.destaque-img h1');
+const img1 = document.getElementById('img1');
+const img2 = document.getElementById('img2');
+const img3 = document.getElementById('img3');
+const icone1 = document.getElementById('iconimg1')
+const icone2 = document.getElementById('iconimg2')
+const icone3 = document.getElementById('iconimg3')
+const borda = document.querySelectorAll('.destaque-img .borda');
 
-const borda = document.querySelectorAll('.borda');
+img1.addEventListener('mouseover', () => {
+  h1[0].style.opacity = '0';
+  icone1.style.display = 'none'
+  borda[0].style.display = 'none';
+});
 
-for (let i = 0; i < imgs.length; i++) {
-  imgs[i].addEventListener('mouseover', () => {
-    h1.forEach((text) => {
-      text.style.opacity = '0';
-    });
-    habilidades.forEach((icons) => {
-      icons.style.opacity = '0'
-    })
+img1.addEventListener('mouseout', () => {
+  h1[0].style.opacity = '1';
+  icone1.style.display = 'flex'
+  borda[0].style.display = 'block';
+});
 
-    borda.forEach((bord) => {
-      bord.style.display = 'none'
-    })
-  });
+img2.addEventListener('mouseover', () => {
+  h1[1].style.opacity = '0';
+  icone2.style.display = 'none'
+  borda[1].style.display = 'none';
+});
 
-  imgs[i].addEventListener('mouseout', () => {
-    h1.forEach((text) => {
-      text.style.opacity = '1';
-    });
-    habilidades.forEach((icons) => {
-      icons.style.opacity = '1'
-    })
+img2.addEventListener('mouseout', () => {
+  h1[1].style.opacity = '1';
+  icone2.style.display = 'flex'
+  borda[1].style.display = 'block';
+});
 
-    borda.forEach((bord) => {
-      bord.style.display = 'block'
-    })
-  });
-}
+img3.addEventListener('mouseover', () => {
+  h1[2].style.opacity = '0';
+  icone3.style.display = 'none'
+  borda[2].style.display = 'none';
+});
+
+img3.addEventListener('mouseout', () => {
+  h1[2].style.opacity = '1';
+  icone3.style.display = 'flex'
+  borda[2].style.display = 'block';
+});
 
 
