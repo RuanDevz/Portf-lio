@@ -418,8 +418,8 @@ h1#title{
   display: flex;
   justify-content: center;
   opacity: 0;
-  transform: translateX(-70%);
-  transition: opacity 2s ease-out, transform 2s ease-out;
+  transform: translateX(-20%);
+  transition: opacity .5s ease-out, transform .5s ease-out;
 }
 
 .allskills.visible {
@@ -584,7 +584,7 @@ div#contact:hover{
 
 [data-anime]{
   opacity: 0;
-  transition: 2s;
+  transition: .5s;
 }
 
 [data-anime="left"]{
