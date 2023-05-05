@@ -21,7 +21,7 @@ function toggleTema() {
   } else {
     light.classList.remove('dark-theme');
     light.classList.add('light-theme');
-    portfolio.style.color = '#13131f';
+    portfolio.style.color = '#d8dbe0';
     nome.style.color = '#13131f';
     for (let i = 0; i < h1s.length; i++) {
       h1s[i].style.color = '#13131f';
