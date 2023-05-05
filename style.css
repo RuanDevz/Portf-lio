@@ -419,8 +419,7 @@ h1#title{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  position: relative;
+  gap: 30px;
 }
 
 
@@ -483,8 +482,8 @@ a{
 .destaque-img h1{
 color: white;
 text-align: center;
-position: relative;
-transform: translate(-50%,380%);
+position: absolute;
+transform: translate(-50%,300%);
 left: 50%;
 z-index: 1;
 }
@@ -512,9 +511,8 @@ z-index: 1;
 .contatos{
   display: flex;
   justify-content: center;
-  flex-direction: column;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 80px;
 }
 .contatos h1{
   text-align: center;
@@ -570,4 +568,18 @@ div#contact:hover{
 [data-anime].animate{
   opacity: 1;
   transform: translateX(0%);
+}
+
+@media screen and (min-width: 690px) {
+  .destaque-img h1{
+    position: relative;
+    transform: translate(-50%,370%);
+    }
+
+    .contatos{
+      display: flex;
+      flex-direction: none;
+      flex-wrap: wrap;
+    }
+
 }
