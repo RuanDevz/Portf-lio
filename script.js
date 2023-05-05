@@ -4,6 +4,7 @@ const portfolio = document.getElementById('portfolio');
 const nome = document.getElementById('nome');
 const h1s = document.querySelectorAll('h1#title');
 const h2s = document.getElementById('destaq');
+const destaques = document.querySelector('animation')
 
 check.addEventListener('click', toggleTema);
 
@@ -57,6 +58,8 @@ function checkScroll() {
     window.removeEventListener('scroll', checkScroll);
   }
 }
+
+
 window.addEventListener('scroll', checkScroll);
 
 
@@ -104,4 +107,20 @@ img3.addEventListener('mouseout', () => {
   icone3.style.display = 'flex'
   borda[2].style.display = 'block';
 });
+
+const target = document.querySelectorAll('[data-anime]')
+const animate = 'animate'
+
+function animescroll(){
+  const windowtop = window.pageYOffset + 700;
+  target.forEach(element => {
+    if((windowtop) > element.offsetTop){
+      element.classList.add(animate);
+    }
+  });
+}
+
+window.addEventListener('scroll', function(){
+  animescroll();
+})
 
