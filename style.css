@@ -416,6 +416,10 @@ h1#title{
 }
 
 .destaques{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   position: relative;
 }
 
@@ -473,14 +477,14 @@ a{
 }
 
 .principal:hover {
-  transform: scale(1.1) translateZ(20px); /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
+  transform: scale(1.1) translateZ(30px); /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
 }
 
 .destaque-img h1{
 color: white;
 text-align: center;
-position: absolute;
-transform: translate(-50%,300%);
+position: relative;
+transform: translate(-50%,380%);
 left: 50%;
 z-index: 1;
 }
