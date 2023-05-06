@@ -29,6 +29,24 @@ function toggleTema() {
     h2s.style.color ='#13131f'
   }
 }
+const menu = document.getElementById('menu');
+const lista = document.getElementById('lista')
+menu.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+  if (lista.style.display === 'flex') {
+    lista.style.display = 'none';
+    light.style.backdropFilter= 'blur(5px)'
+    menu.classList.add('fa-bars');
+    menu.classList.remove('fa-xmark');
+  } else {
+    light.style.backdropFilter= 'blur(0px)'
+    menu.classList.add('fa-xmark');
+    menu.classList.remove('fa-bars');
+    lista.style.display = 'flex';
+  }
+}
+
 
 
 
@@ -119,6 +137,8 @@ function animescroll(){
     }
   });
 }
+
+
 
 window.addEventListener('scroll', function(){
   animescroll();

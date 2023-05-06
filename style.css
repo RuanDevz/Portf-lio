@@ -27,6 +27,7 @@ body{
     background-color: #13131f;
     height: 100vh;
     overflow-x: hidden;
+    
 }
 
 header{
@@ -44,9 +45,30 @@ header{
 
 .menu{
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  position: absolute;
+  top: 200%;
+  left: -430%;
+  font-size: 2em;
   margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
+  opacity: 0;
+  transform: translateX(-20%);
+}
+
+.menu.animate{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+
+ a{
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  color: #8257E6;
+  margin-top: 20px;
 }
 
 header h1{
@@ -61,6 +83,22 @@ header .fa-bars{
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
+}
+
+.fa-xmark{
+  font-size: 1.1rem;
+  color: #8257E6;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.fa-xmark{
+color:#13131f ;
+background-color: #8257e6;
+border-radius: 10px;
+padding: 0.5rem;
+border-radius: 50%;
 }
 
 header .fa-bars:hover{
