@@ -29,29 +29,17 @@ function toggleTema() {
     h2s.style.color ='#13131f'
   }
 }
+
 const menu = document.getElementById('menu');
-const lista = document.getElementById('lista')
-menu.addEventListener('click', toggleMenu);
+const nav = document.getElementById('lista');
 
-function toggleMenu() {
-  if (lista.style.display === 'flex') {
-    lista.style.display = 'none';
-    light.style.backdropFilter= 'blur(5px)'
-    menu.classList.add('fa-bars');
-    menu.classList.remove('fa-xmark');
+menu.addEventListener('click', () =>{
+  if(lista.style.display == 'none'){
+    lista.style.display = 'flex'
   } else {
-    light.style.backdropFilter= 'blur(0px)'
-    menu.classList.add('fa-xmark');
-    menu.classList.remove('fa-bars');
-    lista.style.display = 'flex';
+    lista.style.display = 'none'
   }
-}
-
-
-
-
-
-
+})
 
 setTimeout(function() {
     document.querySelector('.myname').classList.add('show');
