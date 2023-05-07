@@ -30,20 +30,24 @@ function toggleTema() {
   }
 }
 
-const menu = document.getElementById('menu');
-const nav = document.getElementById('lista');
+document.addEventListener("DOMContentLoaded", function() {
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('lista');
 
-menu.addEventListener('click', () =>{
-  if(lista.style.display == 'none'){
-    menu.classList.remove('fa-bars')
-    menu.classList.add('fa-xmark')
-    lista.style.display = 'flex'
-  } else {
-    menu.classList.remove('fa-xmark')
-    menu.classList.add('fa-bars')
-    lista.style.display = 'none'
-  }
-})
+  menu.addEventListener('click', () => {
+    if(nav.style.display == 'none' || nav.style.display === ''){
+      menu.classList.remove('fa-bars')
+      menu.classList.add('fa-xmark')
+      nav.style.display = 'flex'
+    } else {
+      menu.classList.remove('fa-xmark')
+      menu.classList.add('fa-bars')
+      nav.style.display = 'none'
+    }
+  });
+});
+
+
 
 setTimeout(function() {
     document.querySelector('.myname').classList.add('show');
