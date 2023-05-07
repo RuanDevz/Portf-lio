@@ -89,42 +89,66 @@ const icone1 = document.getElementById('iconimg1')
 const icone2 = document.getElementById('iconimg2')
 const icone3 = document.getElementById('iconimg3')
 const borda = document.querySelectorAll('.destaque-img .borda');
+const showinfo = document.querySelectorAll('.vermais')
 
 img1.addEventListener('mouseover', () => {
   h1[0].style.display = 'none';
-  icone1.style.display = 'none'
+  icone1.style.display = 'none';
   borda[0].style.display = 'none';
+  showinfo[0].style.display = 'flex';
 });
 
 img1.addEventListener('mouseout', () => {
   h1[0].style.display = 'block';
-  icone1.style.display = 'flex'
+  icone1.style.display = 'flex';
   borda[0].style.display = 'block';
+  
+  setTimeout(() => {
+    showinfo[0].style.animation = 'slide-inverso .5s ease-out forwards';
+    showinfo[0].addEventListener('animationend', () => {
+      showinfo[0].style.display = 'none';
+    });
+  }, 2000);
 });
 
 img2.addEventListener('mouseover', () => {
   h1[1].style.display = 'none';
-  icone2.style.display = 'none'
+  icone2.style.display = 'none';
   borda[1].style.display = 'none';
+  showinfo[1].style.display = 'flex';
 });
 
 img2.addEventListener('mouseout', () => {
   h1[1].style.display = 'block';
-  icone2.style.display = 'flex'
+  icone2.style.display = 'flex';
   borda[1].style.display = 'block';
+  setTimeout(() => {
+    showinfo[1].style.animation = 'slide-inverso 1s ease-out forwards';
+    showinfo[1].addEventListener('animationend', () => {
+      showinfo[1].style.display = 'none';
+    });
+  }, 2000);
 });
 
 img3.addEventListener('mouseover', () => {
   h1[2].style.display = 'none';
-  icone3.style.display = 'none'
+  icone3.style.display = 'none';
   borda[2].style.display = 'none';
+  showinfo[2].style.display = 'flex';
 });
 
 img3.addEventListener('mouseout', () => {
   h1[2].style.display = 'block';
-  icone3.style.display = 'flex'
+  icone3.style.display = 'flex';
   borda[2].style.display = 'block';
+  setTimeout(() => {
+    showinfo[2].style.animation = 'slide-inverso 1s ease-out forwards';
+    showinfo[2].addEventListener('animationend', () => {
+      showinfo[2].style.display = 'none';
+    });
+  }, 2000);
 });
+
 
 const target = document.querySelectorAll('[data-anime]')
 const animate = 'animate'
@@ -143,4 +167,3 @@ function animescroll(){
 window.addEventListener('scroll', function(){
   animescroll();
 })
-

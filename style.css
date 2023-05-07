@@ -54,10 +54,10 @@ header{
   font-size: 2em;
   margin: 0 auto;
   opacity: 0;
-  transform: translateX(-20%);
+  transform: translateX(20%);
 }
 
-.menu.animate{
+.menu.animacao{
   opacity: 1;
   transform: translateX(0%);
 }
@@ -86,14 +86,14 @@ header .fa-bars{
 }
 
 .fa-xmark{
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #8257E6;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
 }
 
-.fa-xmark{
+.fa-xmark:hover{
 color:#13131f ;
 background-color: #8257e6;
 border-radius: 10px;
@@ -285,7 +285,7 @@ p {
     justify-content: center;
     padding: 10px 0px;
   }
-  button {
+  button#links {
     position: relative;
     padding: 1em 1.8em;
     outline: none;
@@ -302,7 +302,7 @@ p {
     font-weight: bold;
    }
    
-   button:hover {
+   button#links:hover {
     box-shadow: 0 0 10px #8257e6, 0 0 25px #001eff, 0 0 50px #8257e6;
     transition-delay: 0.6s;
    }
@@ -492,6 +492,38 @@ h1#title{
   cursor: pointer;
 }
 
+.vermais{
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  width: 330px;
+  height: 50px;
+  background-color: #212121;
+  border-bottom: #9161ff;
+  border-radius: 5px 5px 5px 5px;
+  margin-top: 6px;
+  animation: slide .5s ease;
+}
+
+.vermais p{
+  font-size: 1em;
+  color: #8257E6;
+}
+
+.vermais button{
+  color: #8257E6;
+  background-color: #28292c;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.vermais button:hover{
+  background-color: #8257E6;
+  color:#28292c ;
+}
+
 a{
   text-decoration: none;
 }
@@ -512,7 +544,7 @@ a{
   margin: 0 auto;
   filter: brightness(1);
   width: 330px;
-  height: 5px;
+  height: 1px;
   background-color: #9161ff;
   animation: slide 0.5s ease ;
 }
@@ -520,6 +552,18 @@ a{
 .principal{
   transition: transform 0.5s ease-out;
   animation: slide 0.5s ease;
+}
+
+@keyframes slide-inverso {
+  from{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translateX(20%);
+  }
 }
 
 
@@ -534,6 +578,7 @@ a{
     transform: translate(0%);
   }
 }
+
 
 .principal:hover {
   transform: scale(1.1) translateZ(30px); /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
