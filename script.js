@@ -35,8 +35,12 @@ const nav = document.getElementById('lista');
 
 menu.addEventListener('click', () =>{
   if(lista.style.display == 'none'){
+    menu.classList.remove('fa-bars')
+    menu.classList.add('fa-xmark')
     lista.style.display = 'flex'
   } else {
+    menu.classList.remove('fa-xmark')
+    menu.classList.add('fa-bars')
     lista.style.display = 'none'
   }
 })
