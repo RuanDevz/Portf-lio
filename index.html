@@ -12,7 +12,7 @@
     <title>Portfólio</title>
 </head>
 <body id="light">
-    <header>
+    <header id="inicio">
             <i id="menu" class="fa-solid fa-bars"></i>
             <h1 id="portfolio">Portfólio</h1>
             <div class="toggle-switch">
@@ -24,11 +24,11 @@
     </header>
     <div>
         <nav id="lista" class="menu" >
-            <a href="">Inicio</a>
-            <a href="">Sobre mim</a>
-            <a href="">Habilidades</a>
-            <a href="">Projetos</a>
-            <a href="">Contatos</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#title">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contatos">Contatos</a>
           </nav>
     </div>
     <main>
@@ -65,10 +65,13 @@
 </div>
         </section>
         <section class="segund">
-            <h1 id="title" >Sobre mim</h1>
+            <h1 id="title">Sobre mim</h1>
             <p>Sou um estudante de desenvolvimento Front-End apaixonado por criar experiências digitais incríveis para os usuários, utilizando as linguagens HTML, CSS e Javascript. Atualmente, estou aprimorando minhas habilidades por meio do curso de graduação em Análise e Desenvolvimento de Sistemas, além de estar me dedicando ao aprendizado da língua inglesa para expandir ainda mais meus horizontes.</p>
+            <div class="seta_container">
+                <a href="#light"><i class="fa-solid fa-chevron-up"></i></a>
+            </div>
         </section>
-        <section class="third">
+        <section id="habilidades" class="third">
             <h1 id="title">Habilidades</h1>
             <div class="allskills">
                 <div id="skills" class="html">
@@ -89,7 +92,7 @@
                 </div>
             </div>
         </section>
-            <section class="projetos">
+            <section id="projetos" class="projetos">
               <h1 id="title">Projetos</h1>
               <h2 id="destaq">Destaques</h2>
               <div id="animation" class="destaques"  data-anime='left'>
@@ -106,6 +109,24 @@
                   <div class="vermais">
                     <p>@RuanDevz</p>
                     <button id="vermais">Ver mais</button>
+                  </div>
+                  <div class="Findafrind-infos">
+                    <div class="header-foop">
+                        <h1 id="titulo">FindAFriend</h1>
+                        <i id="menu" class="fa-solid fa-xmark"></i>
+                    </div>
+                    <p>Este é um projeto que eu fiz no evento da Rocketseat, onde o intuito era desenvolvedor uma pagina web completa para doação de Pets</p>
+                    <h2>Tecnologias</h2>
+                    <div class="tecnologias-foop">
+                        <p>-HTML</p>
+                        <p>-CSS</p>
+                        <p>-Javascript</p>
+                    </div>
+                    <div class="botoes-foop">
+                        <button>Acessar Projeto</button>
+                        <button>Acessar Repositorio</button>
+                        <button>Ver postagem</button>
+                    </div>
                   </div>
                 </div>
                 <div class="destaque-img">
@@ -140,7 +161,7 @@
                 </div>
               </div>
             </section>
-            <section class="allcontacts" data-anime="left">
+            <section id="contatos" class="allcontacts" data-anime="left">
                 <h1 class="last-title" id="title">Contatos</h1>
                 <div class="contatos">
                     <div id="contact" class="email">
