@@ -106,7 +106,7 @@ const icone1 = document.getElementById('iconimg1')
 const icone2 = document.getElementById('iconimg2')
 const icone3 = document.getElementById('iconimg3')
 const borda = document.querySelectorAll('.destaque-img .borda');
-const showinfo = document.querySelectorAll('.vermais')
+const showinfo = document.querySelectorAll('.vermais');
 
 img1.addEventListener('mouseover', () => {
   h1[0].style.display = 'none';
@@ -131,7 +131,7 @@ img1.addEventListener('mouseout', () => {
 });
 
 img2.addEventListener('mouseover', () => {
-  h1[1].style.display = 'none';
+  h1[2].style.display = 'none'
   icone2.style.display = 'none';
   borda[1].style.display = 'none';
   showinfo[1].style.display = 'flex';
@@ -139,7 +139,7 @@ img2.addEventListener('mouseover', () => {
 });
 
 img2.addEventListener('mouseout', () => {
-  h1[1].style.display = 'block';
+  h1[2].style.display = 'block';
   icone2.style.display = 'flex';
   borda[1].style.display = 'block';
   showinfo[1].style.width = '330px';
@@ -153,7 +153,7 @@ img2.addEventListener('mouseout', () => {
 });
 
 img3.addEventListener('mouseover', () => {
-  h1[2].style.display = 'none';
+  h1[3].style.display = 'none';
   icone3.style.display = 'none';
   borda[2].style.display = 'none';
   showinfo[2].style.display = 'flex';
@@ -161,7 +161,7 @@ img3.addEventListener('mouseover', () => {
 });
 
 img3.addEventListener('mouseout', () => {
-  h1[2].style.display = 'block';
+  h1[3].style.display = 'block';
   icone3.style.display = 'flex';
   borda[2].style.display = 'block';
   showinfo[2].style.width = '330px';
@@ -173,9 +173,6 @@ img3.addEventListener('mouseout', () => {
     }, 1000);
   }, 3000);
 });
-
-
-
 
 const target = document.querySelectorAll('[data-anime]')
 const animate = 'animate'
@@ -194,3 +191,25 @@ function animescroll(){
 window.addEventListener('scroll', function(){
   animescroll();
 })
+
+const sobreprojeto = document.querySelectorAll('div#sobreprojeto');
+const vermais = document.querySelectorAll('button#vermais');
+const show = document.getElementById('show');
+
+vermais[0].addEventListener('click', () =>{
+  if(sobreprojeto[0].style.display == 'none'){
+    sobreprojeto[0].style.display = 'block';
+    light.classList.add('enbacado')
+  } else {
+    sobreprojeto[0].style.display = 'none';
+  }
+});
+
+show.addEventListener('click', () => {
+  if(sobreprojeto[0].style.display == 'block'){
+    sobreprojeto[0].style.display = 'none'
+  }
+});
+
+
+

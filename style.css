@@ -31,8 +31,8 @@ body{
     background-color: #13131f;
     height: 100vh;
     overflow-x: hidden;
-    
 }
+
 
 header{
   position: fixed;
@@ -516,7 +516,6 @@ h1#title{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
 
@@ -595,27 +594,42 @@ a{
   animation: slide 0.5s ease;
 }
 
-.Findafrind-infos{
+#sobreprojeto{
   display: none;
   width: 350px;
-  height: 550px;
+  height: 620px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-60%);
+  transform: translate(-50%,-50%);
   z-index: 2;
   background-color: #212121;
   border-radius: 10px;
 }
 
 .Findafrind-infos #titulo{
+  padding-top: 5px;
+  position: relative;
+  transform: translate(-120%,0%);
+  color: #8257E6;
+}
+
+.vertigo-infos #titulo{
+  padding-top: 5px;
+  position: relative;
+  transform: translate(-120%,0%);
+  color: #8257E6;
+}
+
+.kanban-infos #titulo{
+  padding-top: 5px;
   position: relative;
   transform: translate(-120%,0%);
   color: #8257E6;
 }
 
 .fa-xmark{
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .header-foop{
@@ -653,6 +667,11 @@ a{
   border-radius: 10px;
   padding: 5px;
   margin-top: 35px;
+}
+
+.botoes-foop button:hover{
+  background-color: #704cc5;
+  transition: .3s;
 }
 
 @keyframes sumindo {
