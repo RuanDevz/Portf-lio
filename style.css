@@ -595,6 +595,7 @@ a{
 }
 
 #informacoes{
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -773,14 +774,13 @@ div#contact:hover{
   transform: translateX(0%);
 }
 
-button#links {
-  padding: 1.3em 5px;
+button#links-info {
+  padding: 13px;
   font-size: 8px;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
   font-weight: 500;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #8d5ffa;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -789,14 +789,14 @@ button#links {
   outline: none;
 }
 
-button#links:hover {
+button#links-info:hover {
   background-color: #8257E6;
   box-shadow: 0px 15px 20px #9161ff;
   color: #fff;
   transform: translateY(-7px);
 }
 
-button#links:active {
+button#links-info:active {
   transform: translateY(-1px);
 }
 

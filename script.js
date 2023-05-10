@@ -131,7 +131,7 @@ img1.addEventListener('mouseout', () => {
 });
 
 img2.addEventListener('mouseover', () => {
-  h1[2].style.display = 'none'
+  h1[1].style.display = 'none'
   icone2.style.display = 'none';
   borda[1].style.display = 'none';
   showinfo[1].style.display = 'flex';
@@ -139,7 +139,7 @@ img2.addEventListener('mouseover', () => {
 });
 
 img2.addEventListener('mouseout', () => {
-  h1[2].style.display = 'block';
+  h1[1].style.display = 'block';
   icone2.style.display = 'flex';
   borda[1].style.display = 'block';
   showinfo[1].style.width = '330px';
@@ -153,7 +153,7 @@ img2.addEventListener('mouseout', () => {
 });
 
 img3.addEventListener('mouseover', () => {
-  h1[3].style.display = 'none';
+  h1[2].style.display = 'none';
   icone3.style.display = 'none';
   borda[2].style.display = 'none';
   showinfo[2].style.display = 'flex';
@@ -161,7 +161,7 @@ img3.addEventListener('mouseover', () => {
 });
 
 img3.addEventListener('mouseout', () => {
-  h1[3].style.display = 'block';
+  h1[2].style.display = 'block';
   icone3.style.display = 'flex';
   borda[2].style.display = 'block';
   showinfo[2].style.width = '330px';
@@ -192,26 +192,28 @@ window.addEventListener('scroll', function(){
   animescroll();
 })
 
-const sobreprojeto = document.querySelectorAll('div#sobreprojeto');
-const vermais = document.querySelectorAll('button#vermais');
-const show = document.getElementById('');
+const informacoes = document.querySelector('#informacoes');
+const vermais = document.querySelectorAll('#vermais');
 
-vermais.forEach((botao, index) => {
-  botao.addEventListener('click', () => {
-    if(sobreprojeto[index].style.display == 'none'){
-      sobreprojeto[index].style.display = 'block';
-      light.classList.add('enbacado')
+vermais.forEach(botao => {
+  botao.addEventListener('click', () =>{
+    if(informacoes.style.display == 'none'){
+      informacoes.style.display = 'block';
     } else {
-      sobreprojeto[index].style.display = 'none';
+      informacoes.style.display = 'none';
     }
   });
 });
 
-show.addEventListener('click', () => {
-  if(sobreprojeto[0].style.display == 'block'){
-    sobreprojeto[0].style.display = 'none'
-  }
-});
+const menuinfo = document.querySelectorAll('#menu-info');
+
+menuinfo.forEach(xmenu =>{
+  xmenu.addEventListener('click', () =>{
+    if(informacoes.style.display == 'block'){
+      informacoes.style.display = 'none'
+    }
+  })
+})
 
 
 
