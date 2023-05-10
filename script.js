@@ -66,10 +66,6 @@ var toggleMenu = function() {
 };
 
 
-
-
-
-
 setTimeout(function() {
     document.querySelector('.myname').classList.add('show');
   }, 1800);
