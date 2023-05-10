@@ -594,84 +594,48 @@ a{
   animation: slide 0.5s ease;
 }
 
-#sobreprojeto{
-  display: none;
-  width: 350px;
-  height: 620px;
+#informacoes{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  z-index: 2;
+  width: 350px;
+  height: 650px;
   background-color: #212121;
-  border-radius: 10px;
+  z-index: 6;
 }
 
-.Findafrind-infos #titulo{
-  padding-top: 5px;
-  position: relative;
-  transform: translate(-120%,0%);
-  color: #8257E6;
-}
-
-.vertigo-infos #titulo{
-  padding-top: 5px;
-  position: relative;
-  transform: translate(-120%,0%);
-  color: #8257E6;
-}
-
-.kanban-infos #titulo{
-  padding-top: 5px;
-  position: relative;
-  transform: translate(-120%,0%);
-  color: #8257E6;
-}
-
-.fa-xmark{
-  font-size: 1em;
-}
-
-.header-foop{
+#header_informacoes{
   display: flex;
   justify-content: space-around;
-  gap: 150px;
-  align-items: center;
+  flex-direction: row;
+  gap:110px;
 }
 
-.Findafrind-infos p {
-  padding: 0px 4px;
-  color: #828282;
-  font-size: 1em;
-  padding-top: 30px;
-  letter-spacing: 1px;
+#header_informacoes{
+  padding: 20px 0px;
+  font-size: 1.3em;
+  color: #8257E6;
+}
+
+
+#sobreoprojeto p{
+  padding-top: 40px;
   text-align: justify;
-}
-
-.tecnologias-foop{
   font-size: 1em;
-  margin-left: 10px;
-  margin: 0;
+  color: #828282;
+  letter-spacing: 1px;
 }
 
-.botoes-foop{
+#tecnologiasusadas{
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 50px;
+  width: 50px;
 }
 
-.botoes-foop button{
-  border: none;
-  color: white;
-  background-color: #8257E6;
-  border-radius: 10px;
-  padding: 5px;
-  margin-top: 35px;
-}
-
-.botoes-foop button:hover{
-  background-color: #704cc5;
-  transition: .3s;
+#botoeslinks{
+  display: flex;
+  justify-content: space-around;
 }
 
 @keyframes sumindo {
@@ -807,6 +771,33 @@ div#contact:hover{
 [data-anime].animate{
   opacity: 1;
   transform: translateX(0%);
+}
+
+button#links {
+  padding: 1.3em 5px;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button#links:hover {
+  background-color: #8257E6;
+  box-shadow: 0px 15px 20px #9161ff;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button#links:active {
+  transform: translateY(-1px);
 }
 
 @media screen and (min-width: 690px) {

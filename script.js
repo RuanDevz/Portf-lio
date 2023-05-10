@@ -194,15 +194,17 @@ window.addEventListener('scroll', function(){
 
 const sobreprojeto = document.querySelectorAll('div#sobreprojeto');
 const vermais = document.querySelectorAll('button#vermais');
-const show = document.getElementById('show');
+const show = document.getElementById('');
 
-vermais[0].addEventListener('click', () =>{
-  if(sobreprojeto[0].style.display == 'none'){
-    sobreprojeto[0].style.display = 'block';
-    light.classList.add('enbacado')
-  } else {
-    sobreprojeto[0].style.display = 'none';
-  }
+vermais.forEach((botao, index) => {
+  botao.addEventListener('click', () => {
+    if(sobreprojeto[index].style.display == 'none'){
+      sobreprojeto[index].style.display = 'block';
+      light.classList.add('enbacado')
+    } else {
+      sobreprojeto[index].style.display = 'none';
+    }
+  });
 });
 
 show.addEventListener('click', () => {
