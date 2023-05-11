@@ -188,25 +188,63 @@ window.addEventListener('scroll', function(){
   animescroll();
 })
 
-const informacoes = document.querySelector('#informacoes');
-const vermais = document.querySelectorAll('#vermais');
 
-vermais.forEach(botao => {
-  botao.addEventListener('click', () =>{
-    if(informacoes.style.display == 'none'){
-      informacoes.style.display = 'block';
-    } else {
-      informacoes.style.display = 'none';
-    }
-  });
+const findafriendinformacoes = document.querySelector('#findafriendinformacoes');
+const vertigoinformacoes = document.querySelector('#vertigoinformacoes');
+const kanbaninformacoes = document.querySelector('#kanbaninformacoes');
+const findafriendbutton = document.getElementsByClassName('findafriendbutton')[0];
+const findafriendtitulo = document.getElementById('findafriend-title');
+const sobrefindafriend = document.getElementById('findafriend-sobre');
+const vertigobutton = document.getElementsByClassName('vertigobutton')[0];
+const vertigotitulo = document.getElementById('vertigo-title');
+const sobrevertigo = document.getElementById('vertigo-sobre');
+const kanbantitulo = document.getElementById('kanban-title');
+const sobrekanban = document.getElementById('kanban-sobre');
+const kanbanbutton = document.getElementsByClassName('kanbanbutton')[0];
+
+findafriendbutton.addEventListener('click', () => {
+  if (findafriendinformacoes.style.display === 'none') {
+    findafriendinformacoes.style.display = 'block';
+    findafriendtitulo.textContent = 'FindaFriend';
+    sobrefindafriend.textContent = 'Este projeto foi feito junto com a Rockseat, com o fim de ajudar a pessoas encontrarem os seus Pets, foi o meu primeiro projeto Front-end Completo, desenvolvendo des da parte inicial até as interações internas';
+  } else {
+    findafriendinformacoes.style.display = 'none';
+  }
 });
+
+vertigobutton.addEventListener('click', () => {
+  if (vertigoinformacoes.style.display === 'none') {
+    vertigoinformacoes.style.display = 'block';
+    vertigotitulo.textContent = 'Vertigo';
+    sobrevertigo.textContent = 'Projeto que eu fiz junto a Rockseat, onde consegui aprimorar minhas habilidades ao desenvolver uma tela de login e aonde aprendi sobre validações de dados em Javascript';
+  } else {
+    vertigoinformacoes.style.display = 'none';
+  }
+});
+
+kanbanbutton.addEventListener('click', () =>{
+  if(kanbaninformacoes.style.display == 'none'){
+    kanbaninformacoes.style.display = 'block';
+    kanbantitulo.textContent = 'Kanban';
+    sobrekanban.textContent = 'Este projeto eu fiz junto a Rocketseat com o intuito de fazer um Kanban, onde consigo listar o que eu vou fazer, o que eu estou fazendo e o que eu já fiz.';
+  }else{
+    kanbaninformacoes.style.display = 'none';
+  }
+})
+
 
 const menuinfo = document.querySelectorAll('#menu-info');
 
 menuinfo.forEach(xmenu =>{
   xmenu.addEventListener('click', () =>{
-    if(informacoes.style.display == 'block'){
-      informacoes.style.display = 'none'
+    if(findafriendinformacoes.style.display == 'block'){
+      findafriendinformacoes.style.display = 'none';
+    }
+    if(vertigoinformacoes.style.display == 'block'){
+      vertigoinformacoes.style.display = 'none';
+    }
+    if(kanbaninformacoes.style.display == 'block'){
+      kanbaninformacoes.style.display = 'none';
     }
   })
 })
