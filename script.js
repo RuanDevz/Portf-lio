@@ -5,6 +5,7 @@ const nome = document.getElementById('nome');
 const h1s = document.querySelectorAll('h1#title');
 const h2s = document.getElementById('destaq');
 const destaques = document.querySelector('animation')
+const titlecontacts = document.querySelectorAll('#titlecontacts');
 
 check.addEventListener('click', toggleTema);
 
@@ -17,7 +18,10 @@ function toggleTema() {
     for (let i = 0; i < h1s.length; i++) {
       h1s[i].style.color = '#d8dbe0';
     }
-    h2s.style.color ='#d8dbe0'
+    h2s.style.color = '#d8dbe0';
+    for (let i = 0; i < titlecontacts.length; i++) {
+      titlecontacts[i].style.color = '#d8dbe0';
+    }
   } else {
     light.classList.remove('dark-theme');
     light.classList.add('light-theme');
@@ -26,9 +30,13 @@ function toggleTema() {
     for (let i = 0; i < h1s.length; i++) {
       h1s[i].style.color = '#13131f';
     }
-    h2s.style.color ='#13131f'
+    h2s.style.color = '#13131f';
+    for (let i = 0; i < titlecontacts.length; i++) {
+      titlecontacts[i].style.color = '#13131f';
+    }
   }
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const menu = document.getElementById('menu');
@@ -42,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
       menu.classList.add('fa-xmark')
       nav.style.display = 'flex'
       body.classList.add('no-scroll');
+      nav.style.position = 'fixed'
+      nav.style.zIndex = '9'
     } else {
       menu.classList.remove('fa-xmark')
       menu.classList.add('fa-bars')
@@ -126,6 +136,22 @@ img1.addEventListener('mouseout', () => {
   }, 3000);
 });
 
+h1[0].addEventListener('mouseover', () => {
+  img1.dispatchEvent(new Event('mouseover'));
+});
+
+h1[0].addEventListener('mouseout', () => {
+  img1.dispatchEvent(new Event('mouseout'));
+});
+
+icone1.addEventListener('mouseover', () => {
+  img1.dispatchEvent(new Event('mouseover'));
+});
+
+icone1.addEventListener('mouseout', () => {
+  img1.dispatchEvent(new Event('mouseout'));
+});
+
 img2.addEventListener('mouseover', () => {
   h1[1].style.display = 'none'
   icone2.style.display = 'none';
@@ -146,6 +172,22 @@ img2.addEventListener('mouseout', () => {
       showinfo[1].style.animation = '';
     }, 1000);
   }, 3000);
+});
+
+h1[1].addEventListener('mouseover', () => {
+  img2.dispatchEvent(new Event('mouseover'));
+});
+
+h1[1].addEventListener('mouseout', () => {
+  img2.dispatchEvent(new Event('mouseout'));
+});
+
+icone2.addEventListener('mouseover', () => {
+  img2.dispatchEvent(new Event('mouseover'));
+});
+
+icone2.addEventListener('mouseout', () => {
+  img2.dispatchEvent(new Event('mouseout'));
 });
 
 img3.addEventListener('mouseover', () => {
@@ -169,6 +211,7 @@ img3.addEventListener('mouseout', () => {
     }, 1000);
   }, 3000);
 });
+
 
 const target = document.querySelectorAll('[data-anime]')
 const animate = 'animate'
@@ -204,7 +247,7 @@ const kanbanbutton = document.getElementsByClassName('kanbanbutton')[0];
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  findafriendbutton.addEventListener('click', () => {
+  img1.addEventListener('click', () => {
     if (findafriendinformacoes.style.display === 'none') {
       findafriendinformacoes.style.display = 'block';
       findafriendtitulo.textContent = 'FindaFriend';
@@ -214,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  vertigobutton.addEventListener('click', () => {
+  img2.addEventListener('click', () => {
     if (vertigoinformacoes.style.display === 'none') {
       vertigoinformacoes.style.display = 'block';
       vertigotitulo.textContent = 'Vertigo';
@@ -224,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  kanbanbutton.addEventListener('click', () =>{
+  img3.addEventListener('click', () =>{
     if(kanbaninformacoes.style.display == 'none'){
       kanbaninformacoes.style.display = 'block';
       kanbantitulo.textContent = 'Kanban';

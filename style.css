@@ -193,7 +193,7 @@ border-radius: 50%;
 }
 
 @keyframes typing {
-  from { width: 0 }
+  from { width: 0% }
   to { width: 100% }
 }
 
@@ -586,7 +586,6 @@ a{
   width: 330px;
   height: 1px;
   background-color: #9161ff;
-  animation: slide 0.5s ease ;
 }
 
 .principal{
@@ -700,7 +699,7 @@ a{
 
 
 .principal:hover {
-  transform: scale(1.1) translateZ(30px); /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
+  transform: scale(1.1) ; /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
 }
 
 .destaque-img h1{
@@ -710,6 +709,10 @@ position: absolute;
 transform: translate(-50%,300%);
 left: 50%;
 z-index: 1;
+}
+
+.showinfo{
+  display: none;
 }
 
 .tecnologias{
@@ -841,6 +844,9 @@ button#links-info:active {
 @media screen and (min-width: 1280px) {
   header#inicio{
     padding: 20px 0px;
+    width: 100%;
+    justify-content: space-around;
+    gap: 500px;
   }
 .first{
   display: flex;
@@ -866,10 +872,22 @@ button#links-info:active {
   }
 
   h1#nome{
-    font-size: 3.1em;
+    font-size: 4em;
   }
   .typing {
     animation: typing 2s; /* Defina a contagem de iteração como 1 */
+  }
+
+  .first h1{
+    max-width: 600px;
+  }
+
+  .first h1 span{
+    font-size: 1.3em;
+  }
+
+  .first p {
+    font-size: 1.5em;
   }
 
   .myname {
@@ -887,6 +905,105 @@ button#links-info:active {
     display: flex;
     gap: 40px;
   }
+
+.projetos h2{
+  font-size: 2.5em;
+  max-width: 180px;
+  margin-left: 90px;
+}
+.container_projetos{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+button#links-info{
+  padding: px;
+  font-size: 1em;
+  letter-spacing: 3px;
+}
+
+.destaque-img h1{
+  font-size: 2.1em;
+}
+
+.tecnologias{
+  gap: 15px;
+}
+
+.tecnologias img{
+  position: relative;
+  transform: translateY(600%);
+  width: 30px;;
+}
+
+.vermais{
+ display: none; 
+}
+
+.borda{
+  
+  width: 500px;
+  height: 4px;
+}
+.destaques img{
+  max-width: 500px;
+}
+
+#findafriendinformacoes{
+  border-radius: 10px;
+  width: 950px;
+  height: 750px;
+}
+
+#header_informacoes h3{
+  font-size: 2.5em;
+}
+
+#menu-info{
+  font-size: 2.5em;
+}
+
+#menu-habilidades{
+  display: flex;
+  justify-content: center;
+}
+
+#menu-habilidades h3{
+  color: white;
+  font-size: 2.5em;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+#tecnologiasusadas{
+  position: relative;
+  padding: 30px 0px;
+  left: 30%;
+}
+
+#tecnologiasusadas img{
+  width: 80px;
+}
+
+#sobreoprojeto p{
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+#vertigoinformacoes{
+  width: 950px;
+  height: 750px;
+}
+
+#kanbaninformacoes{
+  width: 950px;
+  height: 750px;
+}
+
+
 
   h1#title{
     font-size: 3em;
@@ -931,5 +1048,31 @@ button#links-info:active {
     background-color: #303030;
     border-radius: 50%;
   }
+#lista{
+  margin-top: 80px;
+}
+  #lista a:hover{
+    color: #9364ff;
+    font-size: 3.5em;
+    transition: .5s;
+  }
   
+/* Define a altura e largura da barra de rolagem */
+::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Define a cor da rolagem */
+::-webkit-scrollbar-track {
+  background-color: #13131f;
+}
+
+/* Define a cor do indicador de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #8257E6;
+}
+
+
 }
