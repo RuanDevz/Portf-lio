@@ -837,3 +837,99 @@ button#links-info:active {
     }
 
 }
+
+@media screen and (min-width: 1280px) {
+  header#inicio{
+    padding: 20px 0px;
+  }
+.first{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.apresentacao{
+  position: relative;
+  transform: translateY(35%);
+  left: -10%;
+}
+
+.myphoto{
+  display: flex;
+}
+  img#minhafoto{
+    margin-top: 30px;
+    width: 600px;
+    top: 4%;
+    padding: 0;
+    position: relative;
+  }
+
+  h1#nome{
+    font-size: 3.1em;
+  }
+  .typing {
+    animation: typing 2s; /* Defina a contagem de iteração como 1 */
+  }
+
+  .myname {
+    overflow: hidden; /* Oculta o texto original */
+    margin: 0; /* Remove as margens padrão */
+    font-size: 2em; /* Define o tamanho da fonte */
+    font-weight: 500; /* Define a espessura da fonte */
+    white-space: nowrap;
+    opacity: 0; /* Torna o nome invisível */
+    animation: complement 2s steps(100, end), blink .75s step-end infinite; /* Aplica a animação de complemento e o cursor */
+    animation-delay: 1.8s; /* Adiciona um atraso de 2 segundos */
+  }
+
+  .botao{
+    display: flex;
+    gap: 40px;
+  }
+
+  h1#title{
+    font-size: 3em;
+  }
+
+  .segund p{
+    font-size: 1.5em;
+    max-width: 1200px;
+    line-height: 2em;
+  }
+
+  .third{
+    gap: 100px;
+  }
+
+  .last-title{
+    margin-bottom: 90px;
+  }
+  .contatos{
+    gap: 160px;
+  }
+  .contatos p{
+    font-size: 1.2em;
+    margin-bottom: 100px;
+  }
+
+  .seta_container{
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+    position: fixed;
+    top: 75%;
+    left: 94%;
+    z-index: 2;
+  }
+  
+  .fa-chevron-up{
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: right;
+    color: #8257E6;
+    background-color: #303030;
+    border-radius: 50%;
+  }
+  
+}
