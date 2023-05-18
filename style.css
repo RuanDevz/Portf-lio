@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 *{
     margin: 0;
     padding: 0;
@@ -701,6 +700,8 @@ a{
 .principal:hover {
   transform: scale(1.1) ; /* Amplia e move a imagem para a frente ao passar o mouse sobre ela */
 }
+
+
 
 .destaque-img h1{
 color: white;
