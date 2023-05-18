@@ -628,6 +628,18 @@ a{
   z-index: 6;
 }
 
+#landingpageTIinformacoes{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 350px;
+  height: 650px;
+  background-color: #212121;
+  z-index: 6;
+}
+
 #header_informacoes{
   display: flex;
   justify-content: space-around;
@@ -920,6 +932,11 @@ button#links-info:active {
   flex-wrap: wrap;
   gap: 100px;
   width: 100%;
+}
+
+.destaque-img h3{
+  font-size: 2em;
+  color: #fff;
 }
 
 button#links-info{

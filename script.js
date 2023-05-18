@@ -108,9 +108,11 @@ const h1 = document.querySelectorAll('.destaque-img h1');
 const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
+const img4 = document.getElementById('img4')
 const icone1 = document.getElementById('iconimg1')
 const icone2 = document.getElementById('iconimg2')
 const icone3 = document.getElementById('iconimg3')
+const icone4 = document.getElementById('iconimg4')
 const borda = document.querySelectorAll('.destaque-img .borda');
 const showinfo = document.querySelectorAll('.vermais');
 
@@ -210,6 +212,44 @@ img3.addEventListener('mouseout', () => {
       showinfo[2].style.animation = '';
     }, 1000);
   }, 3000);
+});
+
+img1.addEventListener('mouseover', () => {
+  h1[0].style.visibility = 'hidden';
+  icone1.style.visibility = 'hidden';
+  borda[0].style.visibility = 'hidden';
+  showinfo[0].style.display = 'flex';
+  showinfo[0].style.width = '365px';
+});
+
+img4.addEventListener('mouseout', () => {
+  h1[3].style.visibility = 'visible';
+  icone4.style.visibility = 'visible';
+  borda[3].style.visibility = 'visible';
+  showinfo[3].style.width = '330px';
+  setTimeout(() => {
+    showinfo[3].style.animation = 'sumindo 1s';
+    setTimeout(() => {
+      showinfo[3].style.display = 'none';
+      showinfo[3].style.animation = '';
+    }, 1000);
+  }, 3000);
+});
+
+h1[3].addEventListener('mouseover', () => {
+  img4.dispatchEvent(new Event('mouseover'));
+});
+
+h1[3].addEventListener('mouseout', () => {
+  img4.dispatchEvent(new Event('mouseout'));
+});
+
+icone4.addEventListener('mouseover', () => {
+  img4.dispatchEvent(new Event('mouseover'));
+});
+
+icone4.addEventListener('mouseout', () => {
+  img4.dispatchEvent(new Event('mouseout'));
 });
 
 
