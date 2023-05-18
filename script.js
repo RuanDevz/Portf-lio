@@ -115,17 +115,17 @@ const borda = document.querySelectorAll('.destaque-img .borda');
 const showinfo = document.querySelectorAll('.vermais');
 
 img1.addEventListener('mouseover', () => {
-  h1[0].style.display = 'none';
-  icone1.style.display = 'none';
-  borda[0].style.display = 'none';
+  h1[0].style.visibility = 'hidden';
+  icone1.style.visibility = 'hidden';
+  borda[0].style.visibility = 'hidden';
   showinfo[0].style.display = 'flex';
   showinfo[0].style.width = '365px';
 });
 
 img1.addEventListener('mouseout', () => {
-  h1[0].style.display = 'block';
-  icone1.style.display = 'flex';
-  borda[0].style.display = 'block';
+  h1[0].style.visibility = 'visible';
+  icone1.style.visibility = 'visible';
+  borda[0].style.visibility = 'visible';
   showinfo[0].style.width = '330px';
   setTimeout(() => {
     showinfo[0].style.animation = 'sumindo 1s';
@@ -153,17 +153,17 @@ icone1.addEventListener('mouseout', () => {
 });
 
 img2.addEventListener('mouseover', () => {
-  h1[1].style.display = 'none'
-  icone2.style.display = 'none';
-  borda[1].style.display = 'none';
+  h1[1].style.visibility = 'hidden';
+  icone2.style.visibility = 'hidden';
+  borda[1].style.visibility = 'hidden';
   showinfo[1].style.display = 'flex';
   showinfo[1].style.width = '365px';
 });
 
 img2.addEventListener('mouseout', () => {
-  h1[1].style.display = 'block';
-  icone2.style.display = 'flex';
-  borda[1].style.display = 'block';
+  h1[1].style.visibility = 'visible';
+  icone2.style.visibility = 'visible';
+  borda[1].style.visibility = 'visible';
   showinfo[1].style.width = '330px';
   setTimeout(() => {
     showinfo[1].style.animation = 'sumindo 1s';
@@ -191,17 +191,17 @@ icone2.addEventListener('mouseout', () => {
 });
 
 img3.addEventListener('mouseover', () => {
-  h1[2].style.display = 'none';
-  icone3.style.display = 'none';
-  borda[2].style.display = 'none';
+  h1[2].style.visibility = 'hidden';
+  icone3.style.visibility = 'hidden';
+  borda[2].style.visibility = 'hidden';
   showinfo[2].style.display = 'flex';
   showinfo[2].style.width = '365px';
 });
 
 img3.addEventListener('mouseout', () => {
-  h1[2].style.display = 'block';
-  icone3.style.display = 'flex';
-  borda[2].style.display = 'block';
+  h1[2].style.visibility = 'visible';
+  icone3.style.visibility = 'visible';
+  borda[2].style.visibility = 'visible';
   showinfo[2].style.width = '330px';
   setTimeout(() => {
     showinfo[2].style.animation = 'sumindo 1s';
@@ -211,6 +211,7 @@ img3.addEventListener('mouseout', () => {
     }, 1000);
   }, 3000);
 });
+
 
 
 const target = document.querySelectorAll('[data-anime]')
@@ -295,6 +296,5 @@ menuinfo.forEach(xmenu =>{
     }
   })
 })
-
 
 
