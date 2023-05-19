@@ -292,7 +292,7 @@ const kanbanbutton = document.getElementsByClassName('kanbanbutton')[0];
 
 document.addEventListener('DOMContentLoaded', function() {
   img1.addEventListener('click', () => {
-    if (findafriendinformacoes.style.display === 'none') {
+    if (getComputedStyle(findafriendinformacoes).display === 'none') {
       findafriendinformacoes.style.display = 'block';
       findafriendtitulo.textContent = 'FindaFriend';
       sobrefindafriend.textContent = 'Este projeto foi feito junto com a Rockseat, com o fim de ajudar a pessoas encontrarem os seus Pets, foi o meu primeiro projeto Front-end Completo, desenvolvendo des da parte inicial até as interações internas';
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   img2.addEventListener('click', () => {
-    if (vertigoinformacoes.style.display === 'none') {
+    if (getComputedStyle(vertigoinformacoes).display === 'none') {
       vertigoinformacoes.style.display = 'block';
       vertigotitulo.textContent = 'Vertigo';
       sobrevertigo.textContent = 'Projeto que eu fiz junto a Rockseat, onde consegui aprimorar minhas habilidades ao desenvolver uma tela de login e aonde aprendi sobre validações de dados em Javascript';
@@ -312,44 +312,44 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   img3.addEventListener('click', () =>{
-    if(kanbaninformacoes.style.display == 'none'){
+    if (getComputedStyle(kanbaninformacoes).display === 'none') {
       kanbaninformacoes.style.display = 'block';
       kanbantitulo.textContent = 'Kanban';
       sobrekanban.textContent = 'Este projeto eu fiz junto a Rocketseat com o intuito de fazer um Kanban, onde consigo listar o que eu vou fazer, o que eu estou fazendo e o que eu já fiz.';
-    }else{
+    } else {
       kanbaninformacoes.style.display = 'none';
     }
-  })
+  });
 });
 
 img4.addEventListener('click', () =>{
-  if(landingpageTIinformacoes.style.display == 'none'){
+  if (getComputedStyle(landingpageTIinformacoes).display === 'none') {
     landingpageTIinformacoes.style.display = 'block';
     pagetititle.textContent = 'LandingpageTI';
     sobrepageti.textContent = 'Este é um projeto quando eu estava aprendendo sobre HTML CSS e responsividade, um dos meus projetos iniciais.';
   } else {
-    landingpageTIinformacoes.style.display = 'none'
+    landingpageTIinformacoes.style.display = 'none';
   }
-})
-
-
+});
 
 const menuinfo = document.querySelectorAll('#menu-info');
 
 menuinfo.forEach(xmenu =>{
   xmenu.addEventListener('click', () =>{
-    if(findafriendinformacoes.style.display == 'block'){
+    if (getComputedStyle(findafriendinformacoes).display === 'block') {
       findafriendinformacoes.style.display = 'none';
     }
-    if(vertigoinformacoes.style.display == 'block'){
+    if (getComputedStyle(vertigoinformacoes).display === 'block') {
       vertigoinformacoes.style.display = 'none';
     }
-    if(kanbaninformacoes.style.display == 'block'){
+    if (getComputedStyle(kanbaninformacoes).display === 'block') {
       kanbaninformacoes.style.display = 'none';
-    } if(landingpageTIinformacoes.style.display == 'block'){
+    }
+    if (getComputedStyle(landingpageTIinformacoes).display === 'block') {
       landingpageTIinformacoes.style.display = 'none';
     }
-  })
-})
+  });
+});
+
 
 

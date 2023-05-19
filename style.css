@@ -603,6 +603,7 @@ a{
   height: 750px;
   background-color: #212121;
   z-index: 6;
+  animation: aparecendo .5s;
 }
 
 #vertigoinformacoes{
@@ -615,6 +616,7 @@ a{
   height: 750px;
   background-color: #212121;
   z-index: 6;
+  animation: aparecendo .5s;
 }
 
 #kanbaninformacoes{
@@ -627,6 +629,7 @@ a{
   height: 750px;
   background-color: #212121;
   z-index: 6;
+  animation: aparecendo .5s;
 }
 
 #landingpageTIinformacoes{
@@ -638,7 +641,8 @@ a{
   width: 950px;
   height: 750px;
   background-color: #212121;
-  z-index: 6;
+  z-index: 9;
+  animation: aparecendo .5s;
 }
 
 #header_informacoes{
@@ -1037,7 +1041,9 @@ button.links-info{
 
 
   h1#title{
+    padding-top: 150px;
     font-size: 3em;
+    z-index: 0;
   }
 
   .segund p{
@@ -1107,6 +1113,129 @@ button.links-info{
 /* Define a cor do indicador de rolagem */
 ::-webkit-scrollbar-thumb {
   background-color: #8257E6;
+}
+
+@media screen and (min-width: 1920px) {
+  header h1{
+    font-size: 2.5em;
+  }
+
+  header .fa-bars{
+    font-size: 2.5em;
+  }
+
+  .fa-xmark{
+    font-size: 2.5em;
+  }
+}
+.toggle-switch {
+  position: relative;
+  width: 57.5px; /* Aumento de 15% na largura */
+  height: 28.75px; /* Aumento de 15% na altura */
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 28.75px; /* Aumento de 15% na altura */
+  background-color: #13131f;
+  border-radius: 14.375px; /* Aumento de 15% no raio da borda */
+  cursor: pointer;
+  border: 1.5px solid #8257e6;
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14.375px; /* Aumento de 15% no raio da borda */
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 17.25px; /* Aumento de 15% na largura */
+  height: 17.25px; /* Aumento de 15% na altura */
+  border-radius: 50%;
+  -webkit-box-shadow: inset 7px -2px 0 0 var(--light);
+  box-shadow: inset 7px -2px 0 0 var(--light);
+  background-color: var(--dark);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(64.375px); /* Ajuste para mover a bola para o fim do container */
+  -ms-transform: translateX(64.375px); /* Ajuste para mover a bola para o fim do container */
+  transform: translateX(64.375px); /* Ajuste para mover a bola para o fim do container */
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 57.5px; /* Aumento de 15% na largura */
+  height: 28.75px; /* Aumento de 15% na altura */
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100px;
+  height: 28.75px; /* Aumento de 15% na altura */
+  background-color: #13131f;
+  border-radius: 14.375px; /* Aumento de 15% no raio da borda */
+  cursor: pointer;
+  border: 1.5px solid #8257e6;
+}
+.allcontacts{
+  padding-top: 100px;
+}
+
+img#minhafoto{
+  width: 800px;
+}
+
+.first h1{
+  font-size: 4em;
+}
+
+h1#nome{
+  font-size: 5em;
+}
+
+.dev{
+  animation-delay: 3.6s;
+}
+
+.botao{
+  gap: 75px;
+}
+
+button#links{
+  padding: 1.5em 2.4em;
 }
 
 
