@@ -214,12 +214,12 @@ img3.addEventListener('mouseout', () => {
   }, 3000);
 });
 
-img1.addEventListener('mouseover', () => {
-  h1[0].style.visibility = 'hidden';
-  icone1.style.visibility = 'hidden';
-  borda[0].style.visibility = 'hidden';
-  showinfo[0].style.display = 'flex';
-  showinfo[0].style.width = '365px';
+img4.addEventListener('mouseover', () => {
+  h1[3].style.visibility = 'hidden';
+  icone4.style.visibility = 'hidden';
+  borda[3].style.visibility = 'hidden';
+  showinfo[3].style.display = 'flex';
+  showinfo[3].style.width = '365px';
 });
 
 img4.addEventListener('mouseout', () => {
@@ -276,6 +276,7 @@ window.addEventListener('scroll', function(){
 const findafriendinformacoes = document.querySelector('#findafriendinformacoes');
 const vertigoinformacoes = document.querySelector('#vertigoinformacoes');
 const kanbaninformacoes = document.querySelector('#kanbaninformacoes');
+const landingpageti = document.querySelector('#landingpageTIinformacoes');
 const findafriendbutton = document.getElementsByClassName('findafriendbutton')[0];
 const findafriendtitulo = document.getElementById('findafriend-title');
 const sobrefindafriend = document.getElementById('findafriend-sobre');
@@ -283,7 +284,9 @@ const vertigobutton = document.getElementsByClassName('vertigobutton')[0];
 const vertigotitulo = document.getElementById('vertigo-title');
 const sobrevertigo = document.getElementById('vertigo-sobre');
 const kanbantitulo = document.getElementById('kanban-title');
+const pagetititle = document.getElementById('pageti-title')
 const sobrekanban = document.getElementById('kanban-sobre');
+const sobrepageti = document.getElementById('pageti-sobre')
 const kanbanbutton = document.getElementsByClassName('kanbanbutton')[0];
 
 
@@ -319,6 +322,16 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 });
 
+img4.addEventListener('click', () =>{
+  if(landingpageTIinformacoes.style.display == 'none'){
+    landingpageTIinformacoes.style.display = 'block';
+    pagetititle.textContent = 'LandingpageTI';
+    sobrepageti.textContent = 'Este é um projeto quando eu estava aprendendo sobre HTML CSS e responsividade, um dos meus projetos iniciais.';
+  } else {
+    landingpageTIinformacoes.style.display = 'none'
+  }
+})
+
 
 
 const menuinfo = document.querySelectorAll('#menu-info');
@@ -333,6 +346,8 @@ menuinfo.forEach(xmenu =>{
     }
     if(kanbaninformacoes.style.display == 'block'){
       kanbaninformacoes.style.display = 'none';
+    } if(landingpageTIinformacoes.style.display == 'block'){
+      landingpageTIinformacoes.style.display = 'none';
     }
   })
 })

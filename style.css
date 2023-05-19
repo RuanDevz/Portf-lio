@@ -320,6 +320,7 @@ p {
     display: flex;
     justify-content: center;
     padding: 10px 0px;
+    gap: 40px;
   }
   button#links {
     position: relative;
@@ -598,8 +599,8 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 350px;
-  height: 650px;
+  width: 950px;
+  height: 750px;
   background-color: #212121;
   z-index: 6;
 }
@@ -610,8 +611,8 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 350px;
-  height: 650px;
+  width: 950px;
+  height: 750px;
   background-color: #212121;
   z-index: 6;
 }
@@ -622,8 +623,8 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 350px;
-  height: 650px;
+  width: 950px;
+  height: 750px;
   background-color: #212121;
   z-index: 6;
 }
@@ -633,9 +634,9 @@ a{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  width: 350px;
-  height: 650px;
+  transform: translate(-50%,0%);
+  width: 950px;
+  height: 750px;
   background-color: #212121;
   z-index: 6;
 }
@@ -668,7 +669,7 @@ a{
   width: 50px;
 }
 
-#botoeslinks{
+.botoeslinks{
   display: flex;
   justify-content: space-around;
 }
@@ -814,7 +815,7 @@ div#contact:hover{
   transform: translateX(0%);
 }
 
-button#links-info {
+button.links-info {
   padding: 13px;
   font-size: 8px;
   text-transform: uppercase;
@@ -829,14 +830,14 @@ button#links-info {
   outline: none;
 }
 
-button#links-info:hover {
+button.links-info:hover {
   background-color: #8257E6;
   box-shadow: 0px 15px 20px #9161ff;
   color: #fff;
   transform: translateY(-7px);
 }
 
-button#links-info:active {
+button.links-info:active {
   transform: translateY(-1px);
 }
 
@@ -916,10 +917,6 @@ button#links-info:active {
     animation-delay: 1.8s; /* Adiciona um atraso de 2 segundos */
   }
 
-  .botao{
-    display: flex;
-    gap: 40px;
-  }
 
 .projetos h2{
   font-size: 2.5em;
@@ -939,8 +936,7 @@ button#links-info:active {
   color: #fff;
 }
 
-button#links-info{
-  padding: px;
+button.links-info{
   font-size: 1em;
   letter-spacing: 3px;
 }
@@ -991,11 +987,21 @@ button#links-info{
   justify-content: center;
 }
 
-#menu-habilidades h3{
+.menu-habilidades h3{
   color: white;
   font-size: 2.5em;
   padding-top: 30px;
   padding-bottom: 60px;
+  text-align: center;
+}
+
+.tecnologiasusadas{
+  display: flex;
+  justify-content: space-around;
+}
+
+.tecnologiasusadas img{
+  width: 80px;
 }
 
 #tecnologiasusadas{
@@ -1072,6 +1078,10 @@ button#links-info{
     color: #8257E6;
     background-color: #303030;
     border-radius: 50%;
+  }
+
+  .fa-chevron-up:hover{
+    background-color: #3a3a3a;
   }
 #lista{
   margin-top: 80px;
