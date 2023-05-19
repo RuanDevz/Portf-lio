@@ -1237,6 +1237,27 @@ h1#nome{
 button#links{
   padding: 1.5em 2.4em;
 }
+.destaques img{
+  max-width: 650px;
+}
 
+.borda{
+  width: 650px;
+}
+
+.tecnologias img{
+  position: relative;
+  transform: translateY(780%);
+  width: 30px;;
+}
+
+.destaque-img h1{
+color: white;
+text-align: center;
+position: relative;
+transform: translate(-50%,450%);
+left: 50%;
+z-index: 1;
+}
 
 }
