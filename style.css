@@ -84,7 +84,7 @@ header{
   font-weight: bolder;
   text-align: center;
   text-decoration: none;
-  color: #8257E6;
+  color: #fff;
   margin-top: 20px;
 }
 
@@ -1070,7 +1070,7 @@ button.links-info{
     background-color: #3a3a3a;
   }
 #lista{
-  margin-top: 80px;
+  margin-top: 230px;
 }
   #lista a:hover{
     color: #9364ff;
