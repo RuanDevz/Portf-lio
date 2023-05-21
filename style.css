@@ -713,6 +713,11 @@ left: 50%;
 z-index: 1;
 }
 
+.container_maisprojetos h1{
+  position: relative;
+  transform: translate(-50%,450%);
+}
+
 .showinfo{
   display: none;
 }
@@ -806,8 +811,9 @@ div#contact:hover{
 .container_maisprojetos{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 80px;
 }
 
 button.links-info {
