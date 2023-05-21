@@ -109,10 +109,12 @@ const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
 const img4 = document.getElementById('img4')
+const img5 = document.getElementById('img5')
 const icone1 = document.getElementById('iconimg1')
 const icone2 = document.getElementById('iconimg2')
 const icone3 = document.getElementById('iconimg3')
 const icone4 = document.getElementById('iconimg4')
+const icone5 = document.getElementById('iconimg5')
 const borda = document.querySelectorAll('.destaque-img .borda');
 const showinfo = document.querySelectorAll('.vermais');
 
@@ -252,6 +254,44 @@ icone4.addEventListener('mouseout', () => {
   img4.dispatchEvent(new Event('mouseout'));
 });
 
+img5.addEventListener('mouseover', () => {
+  h1[4].style.visibility = 'hidden';
+  icone5.style.visibility = 'hidden';
+  borda[4].style.visibility = 'hidden';
+  showinfo[4].style.display = 'flex';
+  showinfo[4].style.width = '365px';
+});
+
+img5.addEventListener('mouseout', () => {
+  h1[4].style.visibility = 'visible';
+  icone5.style.visibility = 'visible';
+  borda[4].style.visibility = 'visible';
+  showinfo[4].style.width = '330px';
+  setTimeout(() => {
+    showinfo[4].style.animation = 'sumindo 1s';
+    setTimeout(() => {
+      showinfo[4].style.display = 'none';
+      showinfo[4].style.animation = '';
+    }, 1000);
+  }, 3000);
+});
+
+h1[4].addEventListener('mouseover', () => {
+  img5.dispatchEvent(new Event('mouseover'));
+});
+
+h1[4].addEventListener('mouseout', () => {
+  img5.dispatchEvent(new Event('mouseout'));
+});
+
+icone5.addEventListener('mouseover', () => {
+  img5.dispatchEvent(new Event('mouseover'));
+});
+
+icone5.addEventListener('mouseout', () => {
+  img5.dispatchEvent(new Event('mouseout'));
+});
+
 
 
 const target = document.querySelectorAll('[data-anime]')
@@ -276,18 +316,26 @@ window.addEventListener('scroll', function(){
 const findafriendinformacoes = document.querySelector('#findafriendinformacoes');
 const vertigoinformacoes = document.querySelector('#vertigoinformacoes');
 const kanbaninformacoes = document.querySelector('#kanbaninformacoes');
-const landingpageti = document.querySelector('#landingpageTIinformacoes');
-const findafriendbutton = document.getElementsByClassName('findafriendbutton')[0];
+const landingpageTIinformacoes = document.querySelector('#landingpageTIinformacoes');
+const listadetarefasinformacoes = document.querySelector("#Listadetarefasinformacoes");
+
 const findafriendtitulo = document.getElementById('findafriend-title');
 const sobrefindafriend = document.getElementById('findafriend-sobre');
-const vertigobutton = document.getElementsByClassName('vertigobutton')[0];
+
+
 const vertigotitulo = document.getElementById('vertigo-title');
 const sobrevertigo = document.getElementById('vertigo-sobre');
+
+
 const kanbantitulo = document.getElementById('kanban-title');
-const pagetititle = document.getElementById('pageti-title')
 const sobrekanban = document.getElementById('kanban-sobre');
-const sobrepageti = document.getElementById('pageti-sobre')
-const kanbanbutton = document.getElementsByClassName('kanbanbutton')[0];
+
+
+const sobrepageti = document.getElementById('pageti-sobre');
+const pagetititle = document.getElementById('pageti-title');
+
+const listadetarefastitle = document.getElementById('listadetarefas-title')
+const sobrelistadetarefas = document.getElementById('listadetarefas-sobre')
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -332,6 +380,16 @@ img4.addEventListener('click', () =>{
   }
 });
 
+img5.addEventListener('click', () => {
+  if (getComputedStyle(vertigoinformacoes).display === 'none') {
+    listadetarefasinformacoes.style.display = 'block';
+    listadetarefastitle.textContent = 'Lista de Tarefas';
+    sobrelistadetarefas.textContent = 'É um projeto onde o intuito é fazer uma lista de terefas onde você pode controlar seus a fazeres do dia a dia. ATUALMENTE ESTÁ EM DESENVOLVIMENTO';
+  } else {
+    listadetarefasinformacoes.style.display = 'none';
+  }
+});
+
 const menuinfo = document.querySelectorAll('#menu-info');
 
 menuinfo.forEach(xmenu =>{
@@ -347,6 +405,8 @@ menuinfo.forEach(xmenu =>{
     }
     if (getComputedStyle(landingpageTIinformacoes).display === 'block') {
       landingpageTIinformacoes.style.display = 'none';
+    }if(getComputedStyle(listadetarefasinformacoes).display === 'block'){
+      listadetarefasinformacoes.style.display = 'none'
     }
   });
 });

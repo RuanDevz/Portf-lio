@@ -616,6 +616,19 @@ a{
   animation: aparecendo .5s;
 }
 
+#Listadetarefasinformacoes{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  width: 350px;
+  height: 650px;
+  background-color: #212121;
+  z-index: 9;
+  animation: aparecendo .5s;
+}
+
 #header_informacoes{
   display: flex;
   justify-content: space-around;
@@ -790,6 +803,13 @@ div#contact:hover{
   transform: translateX(0%);
 }
 
+.container_maisprojetos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
 button.links-info {
   padding: 13px;
   font-size: 8px;
@@ -824,6 +844,12 @@ button.links-info:active {
     flex-wrap: wrap;
     gap: 70px;
     width: 100%;
+  }
+  .container_maisprojetos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
   }
 }
 
@@ -905,6 +931,13 @@ button.links-info:active {
   flex-wrap: wrap;
   gap: 100px;
   width: 100%;
+}
+
+.container_maisprojetos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .destaque-img h3{
@@ -1010,6 +1043,11 @@ button.links-info{
 }
 
 #landingpageTIinformacoes{
+  width: 950px;
+  height: 750px;
+}
+
+#Listadetarefasinformacoes{
   width: 950px;
   height: 750px;
 }
