@@ -384,7 +384,7 @@ img5.addEventListener('click', () => {
   if (getComputedStyle(vertigoinformacoes).display === 'none') {
     listadetarefasinformacoes.style.display = 'block';
     listadetarefastitle.textContent = 'Lista de Tarefas';
-    sobrelistadetarefas.textContent = 'É um projeto onde o intuito é fazer uma lista de terefas onde você pode controlar seus a fazeres do dia a dia. ATUALMENTE ESTÁ EM DESENVOLVIMENTO';
+    sobrelistadetarefas.textContent = 'É um projeto onde o intuito é fazer uma lista de terefas onde você pode controlar seus a fazeres do dia a dia.';
   } else {
     listadetarefasinformacoes.style.display = 'none';
   }
