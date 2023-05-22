@@ -984,6 +984,10 @@ button.links-info{
 }
 
 #findafriendinformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   border-radius: 10px;
   width: 950px;
   height: 750px;
@@ -1039,21 +1043,37 @@ button.links-info{
   text-align: center;
 }
 #vertigoinformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 950px;
   height: 750px;
 }
 
 #kanbaninformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 950px;
   height: 750px;
 }
 
 #landingpageTIinformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 950px;
   height: 750px;
 }
 
 #Listadetarefasinformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 950px;
   height: 750px;
 }
