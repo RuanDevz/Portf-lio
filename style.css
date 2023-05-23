@@ -876,6 +876,8 @@ button.links-info:active {
   margin-left: 20%;
 }
 
+
+
 .apresentacao{
   position: relative;
   transform: translateY(35%);
@@ -893,6 +895,11 @@ button.links-info:active {
     position: relative;
     animation: pulse 2s;
     animation-delay: 7s;
+  }
+
+  .destaque-img h1.tituloimg{
+    position: relative;
+    bottom: 12%;
   }
 
   h1#nome{
@@ -939,12 +946,15 @@ button.links-info:active {
   width: 100%;
 }
 
+
+
 .container_maisprojetos{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 100px;
 }
+
 
 .destaque-img h3{
   font-size: 2em;
@@ -1170,6 +1180,7 @@ header h1{
   font-size: 2.5em;
 }
 
+
 .fa-xmark{
   font-size: 2.5em;
 }
@@ -1302,6 +1313,11 @@ position: relative;
 transform: translate(-50%,450%);
 left: 50%;
 z-index: 1;
+}
+
+.destaque-img h1.tituloimg{
+  position: relative;
+  bottom: 0%;
 }
 
 }
