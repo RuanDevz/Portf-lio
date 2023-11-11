@@ -629,6 +629,20 @@ a{
   animation: aparecendo .5s;
 }
 
+#buscadordecepinformacoes
+{
+    display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  width: 350px;
+  height: 650px;
+  background-color: #212121;
+  z-index: 9;
+  animation: aparecendo .5s;
+}
+
 #header_informacoes{
   display: flex;
   justify-content: space-around;
@@ -1080,6 +1094,16 @@ button.links-info{
 }
 
 #Listadetarefasinformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 950px;
+  height: 750px;
+}
+
+#buscadordecepinformacoes
+{
   position: absolute;
   top: 50%;
   left: 50%;

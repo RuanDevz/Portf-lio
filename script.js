@@ -84,18 +84,18 @@ setTimeout(function() {
     document.querySelector('.dev').classList.add('mostrar');
   }, 3600);
   
-// Selecione o elemento que deve ser animado
+
 const allSkills = document.querySelector('.allskills');
 
-// Função que adiciona a classe .visible quando o elemento estiver visível na tela
+
 function checkScroll() {
   let elementTop = allSkills.getBoundingClientRect().top + 100;
   let elementBottom = allSkills.getBoundingClientRect().bottom;
 
-  // Verifique se o elemento está na tela
+  
   if (elementTop <= window.innerHeight && elementBottom >= 0) {
     allSkills.classList.add('visible');
-    // Remova o evento de rolagem após a animação ser acionada uma vez
+    
     window.removeEventListener('scroll', checkScroll);
   }
 }
@@ -110,32 +110,34 @@ const img2 = document.getElementById('img2');
 const img3 = document.getElementById('img3');
 const img4 = document.getElementById('img4')
 const img5 = document.getElementById('img5')
+const img6 = document.getElementById('img6')
 const icone1 = document.getElementById('iconimg1')
 const icone2 = document.getElementById('iconimg2')
 const icone3 = document.getElementById('iconimg3')
 const icone4 = document.getElementById('iconimg4')
 const icone5 = document.getElementById('iconimg5')
+const icone6 = document.getElementById('iconimg6')
 const borda = document.querySelectorAll('.destaque-img .borda');
 const showinfo = document.querySelectorAll('.vermais');
 
 img1.addEventListener('mouseover', () => {
-  h1[0].style.visibility = 'hidden';
+  h1[1].style.visibility = 'hidden';
   icone1.style.visibility = 'hidden';
-  borda[0].style.visibility = 'hidden';
-  showinfo[0].style.display = 'flex';
-  showinfo[0].style.width = '365px';
+  borda[1].style.visibility = 'hidden';
+  showinfo[1].style.display = 'flex';
+  showinfo[1].style.width = '365px';
 });
 
 img1.addEventListener('mouseout', () => {
-  h1[0].style.visibility = 'visible';
+  h1[1].style.visibility = 'visible';
   icone1.style.visibility = 'visible';
-  borda[0].style.visibility = 'visible';
-  showinfo[0].style.width = '330px';
+  borda[1].style.visibility = 'visible';
+  showinfo[1].style.width = '330px';
   setTimeout(() => {
-    showinfo[0].style.animation = 'sumindo 1s';
+    showinfo[1].style.animation = 'sumindo 1s';
     setTimeout(() => {
-      showinfo[0].style.display = 'none';
-      showinfo[0].style.animation = '';
+      showinfo[1].style.display = 'none';
+      showinfo[1].style.animation = '';
     }, 1000);
   }, 3000);
 });
@@ -157,23 +159,23 @@ icone1.addEventListener('mouseout', () => {
 });
 
 img2.addEventListener('mouseover', () => {
-  h1[1].style.visibility = 'hidden';
+  h1[2].style.visibility = 'hidden';
   icone2.style.visibility = 'hidden';
-  borda[1].style.visibility = 'hidden';
-  showinfo[1].style.display = 'flex';
-  showinfo[1].style.width = '365px';
+  borda[2].style.visibility = 'hidden';
+  showinfo[2].style.display = 'flex';
+  showinfo[2].style.width = '365px';
 });
 
 img2.addEventListener('mouseout', () => {
-  h1[1].style.visibility = 'visible';
+  h1[2].style.visibility = 'visible';
   icone2.style.visibility = 'visible';
-  borda[1].style.visibility = 'visible';
-  showinfo[1].style.width = '330px';
+  borda[2].style.visibility = 'visible';
+  showinfo[2].style.width = '330px';
   setTimeout(() => {
-    showinfo[1].style.animation = 'sumindo 1s';
+    showinfo[2].style.animation = 'sumindo 1s';
     setTimeout(() => {
-      showinfo[1].style.display = 'none';
-      showinfo[1].style.animation = '';
+      showinfo[2].style.display = 'none';
+      showinfo[2].style.animation = '';
     }, 1000);
   }, 3000);
 });
@@ -195,44 +197,61 @@ icone2.addEventListener('mouseout', () => {
 });
 
 img3.addEventListener('mouseover', () => {
-  h1[2].style.visibility = 'hidden';
-  icone3.style.visibility = 'hidden';
-  borda[2].style.visibility = 'hidden';
-  showinfo[2].style.display = 'flex';
-  showinfo[2].style.width = '365px';
-});
-
-img3.addEventListener('mouseout', () => {
-  h1[2].style.visibility = 'visible';
-  icone3.style.visibility = 'visible';
-  borda[2].style.visibility = 'visible';
-  showinfo[2].style.width = '330px';
-  setTimeout(() => {
-    showinfo[2].style.animation = 'sumindo 1s';
-    setTimeout(() => {
-      showinfo[2].style.display = 'none';
-      showinfo[2].style.animation = '';
-    }, 1000);
-  }, 3000);
-});
-
-img4.addEventListener('mouseover', () => {
   h1[3].style.visibility = 'hidden';
-  icone4.style.visibility = 'hidden';
+  icone3.style.visibility = 'hidden';
   borda[3].style.visibility = 'hidden';
   showinfo[3].style.display = 'flex';
   showinfo[3].style.width = '365px';
 });
 
-img4.addEventListener('mouseout', () => {
+img3.addEventListener('mouseout', () => {
   h1[3].style.visibility = 'visible';
-  icone4.style.visibility = 'visible';
+  icone3.style.visibility = 'visible';
   borda[3].style.visibility = 'visible';
   showinfo[3].style.width = '330px';
   setTimeout(() => {
     showinfo[3].style.animation = 'sumindo 1s';
     setTimeout(() => {
       showinfo[3].style.display = 'none';
+      showinfo[3].style.animation = '';
+    }, 1000);
+  }, 3000);
+});
+
+h1[2].addEventListener('mouseover', () => {
+  img3.dispatchEvent(new Event('mouseover'));
+});
+
+h1[2].addEventListener('mouseout', () => {
+  img3.dispatchEvent(new Event('mouseout'));
+});
+
+icone3.addEventListener('mouseover', () => {
+  img3.dispatchEvent(new Event('mouseover'));
+});
+
+icone3.addEventListener('mouseout', () => {
+  img3.dispatchEvent(new Event('mouseout'));
+});
+
+
+img4.addEventListener('mouseover', () => {
+  h1[4].style.visibility = 'hidden';
+  icone4.style.visibility = 'hidden';
+  borda[4].style.visibility = 'hidden';
+  showinfo[4].style.display = 'flex';
+  showinfo[4].style.width = '365px';
+});
+
+img4.addEventListener('mouseout', () => {
+  h1[4].style.visibility = 'visible';
+  icone4.style.visibility = 'visible';
+  borda[4].style.visibility = 'visible';
+  showinfo[4].style.width = '330px';
+  setTimeout(() => {
+    showinfo[4].style.animation = 'sumindo 1s';
+    setTimeout(() => {
+      showinfo[4].style.display = 'none';
       showinfo[3].style.animation = '';
     }, 1000);
   }, 3000);
@@ -255,23 +274,23 @@ icone4.addEventListener('mouseout', () => {
 });
 
 img5.addEventListener('mouseover', () => {
-  h1[4].style.visibility = 'hidden';
+  h1[5].style.visibility = 'hidden';
   icone5.style.visibility = 'hidden';
-  borda[4].style.visibility = 'hidden';
-  showinfo[4].style.display = 'flex';
-  showinfo[4].style.width = '365px';
+  borda[5].style.visibility = 'hidden';
+  showinfo[5].style.display = 'flex';
+  showinfo[5].style.width = '365px';
 });
 
 img5.addEventListener('mouseout', () => {
-  h1[4].style.visibility = 'visible';
+  h1[5].style.visibility = 'visible';
   icone5.style.visibility = 'visible';
-  borda[4].style.visibility = 'visible';
-  showinfo[4].style.width = '330px';
+  borda[5].style.visibility = 'visible';
+  showinfo[5].style.width = '330px';
   setTimeout(() => {
-    showinfo[4].style.animation = 'sumindo 1s';
+    showinfo[5].style.animation = 'sumindo 1s';
     setTimeout(() => {
-      showinfo[4].style.display = 'none';
-      showinfo[4].style.animation = '';
+      showinfo[5].style.display = 'none';
+      showinfo[5].style.animation = '';
     }, 1000);
   }, 3000);
 });
@@ -291,6 +310,46 @@ icone5.addEventListener('mouseover', () => {
 icone5.addEventListener('mouseout', () => {
   img5.dispatchEvent(new Event('mouseout'));
 });
+
+/////////////////////////////////////////////////
+img6.addEventListener('mouseover', () => {
+  h1[6].style.visibility = 'hidden';
+  icone6.style.visibility = 'hidden';
+  borda[6].style.visibility = 'hidden';
+  showinfo[6].style.display = 'flex';
+  showinfo[6].style.width = '365px';
+});
+
+img6.addEventListener('mouseout', () => {
+  h1[6].style.visibility = 'visible';
+  icone6.style.visibility = 'visible';
+  borda[6].style.visibility = 'visible';
+  showinfo[6].style.width = '330px';
+  setTimeout(() => {
+    showinfo[6].style.animation = 'sumindo 1s';
+    setTimeout(() => {
+      showinfo[6].style.display = 'none';
+      showinfo[6].style.animation = '';
+    }, 1000);
+  }, 3000);
+});
+
+h1[5].addEventListener('mouseover', () => {
+  img6.dispatchEvent(new Event('mouseover'));
+});
+
+h1[5].addEventListener('mouseout', () => {
+  img6.dispatchEvent(new Event('mouseout'));
+});
+
+icone6.addEventListener('mouseover', () => {
+  img6.dispatchEvent(new Event('mouseover'));
+});
+
+icone6.addEventListener('mouseout', () => {
+  img6.dispatchEvent(new Event('mouseout'));
+});
+
 
 
 
@@ -318,6 +377,7 @@ const vertigoinformacoes = document.querySelector('#vertigoinformacoes');
 const kanbaninformacoes = document.querySelector('#kanbaninformacoes');
 const landingpageTIinformacoes = document.querySelector('#landingpageTIinformacoes');
 const listadetarefasinformacoes = document.querySelector("#Listadetarefasinformacoes");
+const buscadordecepinformacoes = document.querySelector("#buscadordecepinformacoes")
 
 const findafriendtitulo = document.getElementById('findafriend-title');
 const sobrefindafriend = document.getElementById('findafriend-sobre');
@@ -336,6 +396,9 @@ const pagetititle = document.getElementById('pageti-title');
 
 const listadetarefastitle = document.getElementById('listadetarefas-title')
 const sobrelistadetarefas = document.getElementById('listadetarefas-sobre')
+
+const buscadordeceptitle = document.getElementById('buscadordecep-title')
+const sobrebuscadordecep = document.getElementById('buscadordecep-sobre')
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -390,6 +453,16 @@ img5.addEventListener('click', () => {
   }
 });
 
+img6.addEventListener('click', () => {
+  if (getComputedStyle(buscadordecepinformacoes).display === 'none') {
+    buscadordecepinformacoes.style.display = 'block';
+    buscadordeceptitle.textContent = 'Buscador de CEP';
+    sobrebuscadordecep.textContent = 'Este foi o meu primeiro projeto em React onde aprendi a fazer requisições de uma API externa';
+  } else {
+    buscadordecepinformacoes.style.display = 'none';
+  }
+});
+
 const menuinfo = document.querySelectorAll('#menu-info');
 
 menuinfo.forEach(xmenu =>{
@@ -407,6 +480,8 @@ menuinfo.forEach(xmenu =>{
       landingpageTIinformacoes.style.display = 'none';
     }if(getComputedStyle(listadetarefasinformacoes).display === 'block'){
       listadetarefasinformacoes.style.display = 'none'
+    }if(getComputedStyle(buscadordecepinformacoes).display === 'block'){
+      buscadordecepinformacoes.style.display = 'none'
     }
   });
 });
