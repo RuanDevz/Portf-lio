@@ -1113,9 +1113,8 @@ button.links-info{
 }
 
 .destaque-img{
-  
+ 
 }
-
 
 
   h1#title{
@@ -1296,6 +1295,8 @@ header h1{
   border: 1.5px solid #8257e6;
 }
 
+
+
 .first{
   gap: 200px;
 }
@@ -1343,5 +1344,7 @@ z-index: 1;
   position: relative;
   bottom: 0%;
 }
+
+
 
 }

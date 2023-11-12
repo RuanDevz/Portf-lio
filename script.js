@@ -313,23 +313,23 @@ icone5.addEventListener('mouseout', () => {
 
 /////////////////////////////////////////////////
 img6.addEventListener('mouseover', () => {
-  h1[6].style.visibility = 'hidden';
+  h1[0].style.visibility = 'hidden';
   icone6.style.visibility = 'hidden';
-  borda[6].style.visibility = 'hidden';
-  showinfo[6].style.display = 'flex';
-  showinfo[6].style.width = '365px';
+  borda[0].style.visibility = 'hidden';
+  showinfo[0].style.display = 'flex';
+  showinfo[0].style.width = '365px';
 });
 
 img6.addEventListener('mouseout', () => {
-  h1[6].style.visibility = 'visible';
+  h1[0].style.visibility = 'visible';
   icone6.style.visibility = 'visible';
-  borda[6].style.visibility = 'visible';
-  showinfo[6].style.width = '330px';
+  borda[0].style.visibility = 'visible';
+  showinfo[0].style.width = '330px';
   setTimeout(() => {
-    showinfo[6].style.animation = 'sumindo 1s';
+    showinfo[0].style.animation = 'sumindo 1s';
     setTimeout(() => {
-      showinfo[6].style.display = 'none';
-      showinfo[6].style.animation = '';
+      showinfo[0].style.display = 'none';
+      showinfo[0].style.animation = '';
     }, 1000);
   }, 3000);
 });
