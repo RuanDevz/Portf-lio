@@ -239,20 +239,20 @@ icone3.addEventListener('mouseout', () => {
 
 
 img4.addEventListener('mouseover', () => {
-  h1[4].style.visibility = 'hidden';
+  h1[5].style.visibility = 'hidden';
   icone4.style.visibility = 'hidden';
-  borda[4].style.visibility = 'hidden';
-  showinfo[4].style.display = 'flex';
-  showinfo[4].style.width = '365px';
+  borda[5].style.visibility = 'hidden';
+  showinfo[5].style.display = 'flex';
+  showinfo[5].style.width = '365px';
 });
 
 img4.addEventListener('mouseout', () => {
-  h1[4].style.visibility = 'visible';
+  h1[5].style.visibility = 'visible';
   icone4.style.visibility = 'visible';
-  borda[4].style.visibility = 'visible';
-  showinfo[4].style.width = '330px';
+  borda[5].style.visibility = 'visible';
+  showinfo[5].style.width = '330px';
   setTimeout(() => {
-    showinfo[4].style.animation = 'sumindo 1s';
+    showinfo[5].style.animation = 'sumindo 1s';
     setTimeout(() => {
       showinfo[4].style.display = 'none';
       showinfo[3].style.animation = '';
@@ -277,23 +277,23 @@ icone4.addEventListener('mouseout', () => {
 });
 
 img5.addEventListener('mouseover', () => {
-  h1[5].style.visibility = 'hidden';
+  h1[6].style.visibility = 'hidden';
   icone5.style.visibility = 'hidden';
-  borda[5].style.visibility = 'hidden';
-  showinfo[5].style.display = 'flex';
-  showinfo[5].style.width = '365px';
+  borda[6].style.visibility = 'hidden';
+  showinfo[6].style.display = 'flex';
+  showinfo[6].style.width = '365px';
 });
 
 img5.addEventListener('mouseout', () => {
-  h1[5].style.visibility = 'visible';
+  h1[6].style.visibility = 'visible';
   icone5.style.visibility = 'visible';
-  borda[5].style.visibility = 'visible';
-  showinfo[5].style.width = '330px';
+  borda[6].style.visibility = 'visible';
+  showinfo[6].style.width = '330px';
   setTimeout(() => {
-    showinfo[5].style.animation = 'sumindo 1s';
+    showinfo[6].style.animation = 'sumindo 1s';
     setTimeout(() => {
-      showinfo[5].style.display = 'none';
-      showinfo[5].style.animation = '';
+      showinfo[6].style.display = 'none';
+      showinfo[6].style.animation = '';
     }, 1000);
   }, 3000);
 });
@@ -354,23 +354,23 @@ icone6.addEventListener('mouseout', () => {
 });
 
 img7.addEventListener('mouseover', () => {
-  h1[0].style.visibility = 'hidden';
-  icone6.style.visibility = 'hidden';
-  borda[0].style.visibility = 'hidden';
-  showinfo[0].style.display = 'flex';
-  showinfo[0].style.width = '365px';
+  h1[3].style.visibility = 'hidden';
+  icone7.style.visibility = 'hidden';
+  borda[3].style.visibility = 'hidden';
+  showinfo[3].style.display = 'flex';
+  showinfo[3].style.width = '365px';
 });
 
 img7.addEventListener('mouseout', () => {
-  h1[0].style.visibility = 'visible';
-  icone6.style.visibility = 'visible';
-  borda[0].style.visibility = 'visible';
-  showinfo[0].style.width = '330px';
+  h1[3].style.visibility = 'visible';
+  icone7.style.visibility = 'visible';
+  borda[3].style.visibility = 'visible';
+  showinfo[3].style.width = '330px';
   setTimeout(() => {
-    showinfo[0].style.animation = 'sumindo 1s';
+    showinfo[3].style.animation = 'sumindo 1s';
     setTimeout(() => {
-      showinfo[0].style.display = 'none';
-      showinfo[0].style.animation = '';
+      showinfo[3].style.display = 'none';
+      showinfo[3].style.animation = '';
     }, 1000);
   }, 3000);
 });
@@ -536,7 +536,7 @@ menuinfo.forEach(xmenu =>{
       listadetarefasinformacoes.style.display = 'none'
     }if(getComputedStyle(buscadordecepinformacoes).display === 'block'){
       buscadordecepinformacoes.style.display = 'none'
-    }if(getComputedStyle(marioeluigiinformacoes).display === block){
+    }if(getComputedStyle(marioeluigiinformacoes).display === 'block'){
       marioeluigiinformacoes.style.display = 'none'
     }
   });

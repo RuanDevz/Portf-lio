@@ -1125,6 +1125,16 @@ button.links-info{
   height: 750px;
 }
 
+#marioeluigiinformacoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 950px;
+  height: 750px;
+  z-index: 5;
+}
+
 .destaque-img{
  
 }
