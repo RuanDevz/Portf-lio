@@ -111,12 +111,15 @@ const img3 = document.getElementById('img3');
 const img4 = document.getElementById('img4')
 const img5 = document.getElementById('img5')
 const img6 = document.getElementById('img6')
+const img7 = document.getElementById('img7')
+
 const icone1 = document.getElementById('iconimg1')
 const icone2 = document.getElementById('iconimg2')
 const icone3 = document.getElementById('iconimg3')
 const icone4 = document.getElementById('iconimg4')
 const icone5 = document.getElementById('iconimg5')
 const icone6 = document.getElementById('iconimg6')
+const icone7 = document.getElementById('iconimg7')
 const borda = document.querySelectorAll('.destaque-img .borda');
 const showinfo = document.querySelectorAll('.vermais');
 
@@ -350,6 +353,44 @@ icone6.addEventListener('mouseout', () => {
   img6.dispatchEvent(new Event('mouseout'));
 });
 
+img7.addEventListener('mouseover', () => {
+  h1[0].style.visibility = 'hidden';
+  icone6.style.visibility = 'hidden';
+  borda[0].style.visibility = 'hidden';
+  showinfo[0].style.display = 'flex';
+  showinfo[0].style.width = '365px';
+});
+
+img7.addEventListener('mouseout', () => {
+  h1[0].style.visibility = 'visible';
+  icone6.style.visibility = 'visible';
+  borda[0].style.visibility = 'visible';
+  showinfo[0].style.width = '330px';
+  setTimeout(() => {
+    showinfo[0].style.animation = 'sumindo 1s';
+    setTimeout(() => {
+      showinfo[0].style.display = 'none';
+      showinfo[0].style.animation = '';
+    }, 1000);
+  }, 3000);
+});
+
+h1[5].addEventListener('mouseover', () => {
+  img6.dispatchEvent(new Event('mouseover'));
+});
+
+h1[5].addEventListener('mouseout', () => {
+  img6.dispatchEvent(new Event('mouseout'));
+});
+
+icone7.addEventListener('mouseover', () => {
+  img7.dispatchEvent(new Event('mouseover'));
+});
+
+icone7.addEventListener('mouseout', () => {
+  img7.dispatchEvent(new Event('mouseout'));
+});
+
 
 
 
@@ -378,10 +419,10 @@ const kanbaninformacoes = document.querySelector('#kanbaninformacoes');
 const landingpageTIinformacoes = document.querySelector('#landingpageTIinformacoes');
 const listadetarefasinformacoes = document.querySelector("#Listadetarefasinformacoes");
 const buscadordecepinformacoes = document.querySelector("#buscadordecepinformacoes")
+const marioeluigiinformacoes = document.querySelector('#marioeluigiinformacoes')
 
 const findafriendtitulo = document.getElementById('findafriend-title');
 const sobrefindafriend = document.getElementById('findafriend-sobre');
-
 
 const vertigotitulo = document.getElementById('vertigo-title');
 const sobrevertigo = document.getElementById('vertigo-sobre');
@@ -399,6 +440,9 @@ const sobrelistadetarefas = document.getElementById('listadetarefas-sobre')
 
 const buscadordeceptitle = document.getElementById('buscadordecep-title')
 const sobrebuscadordecep = document.getElementById('buscadordecep-sobre')
+
+const marioeluigititle = document.getElementById('marioeluigi-title')
+const sobremarioeluigi = document.getElementById('marioeluigi-sobre')
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -463,6 +507,16 @@ img6.addEventListener('click', () => {
   }
 });
 
+img7.addEventListener('click', () => {
+  if (getComputedStyle(marioeluigiinformacoes).display === 'none') {
+    marioeluigiinformacoes.style.display = 'block';
+    marioeluigititle.textContent = 'Mario e Luigi';
+    sobremarioeluigi.textContent = 'Projeto desenvolvido por meio de tutorial do youtube onde eu consegui aprender um pouco mais sobre o css e algumas bibliotecas de animações';
+  } else {
+    marioeluigiinformacoes.style.display = 'none';
+  }
+});
+
 const menuinfo = document.querySelectorAll('#menu-info');
 
 menuinfo.forEach(xmenu =>{
@@ -482,6 +536,8 @@ menuinfo.forEach(xmenu =>{
       listadetarefasinformacoes.style.display = 'none'
     }if(getComputedStyle(buscadordecepinformacoes).display === 'block'){
       buscadordecepinformacoes.style.display = 'none'
+    }if(getComputedStyle(marioeluigiinformacoes).display === block){
+      marioeluigiinformacoes.style.display = 'none'
     }
   });
 });
